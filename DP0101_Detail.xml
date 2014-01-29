@@ -1,0 +1,2273 @@
+<?xml version="1.0" encoding="euc-kr"?>
+<Window>
+	<Form DisableBKColor="user2" Face3dColor="user23" Height="1048" Id="DP0101_Detail" Left="8" OnLoadCompleted="form1_OnLoadCompleted" PidAttrib="7" Title="신규&#32;상세" Top="8" Ver="1.0" Width="280" WorkArea="true">
+		<Datasets>
+			<Dataset DataSetType="Dataset" Id="dsTrKind">
+				<Contents>
+					<colinfo Id="코드" Size="4" Type="STRING"/>
+					<colinfo Id="코드명" Size="256" Type="STRING"/>
+					<record>
+						<코드>1</코드>
+						<코드명>예금</코드명>
+					</record>
+					<record>
+						<코드>2</코드>
+						<코드명>신용(체크)카드</코드명>
+					</record>
+					<record>
+						<코드>3</코드>
+						<코드명>예금&amp;신용(체크)카드</코드명>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCardIsueReg">
+				<Contents>
+					<colinfo Id="코드" Size="4" Type="STRING"/>
+					<colinfo Id="코드명" Size="256" Type="STRING"/>
+					<record>
+						<코드>Y</코드>
+						<코드명>YES</코드명>
+					</record>
+					<record>
+						<코드>N</코드>
+						<코드명>NO</코드명>
+					</record>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsIndvCorpType">
+				<Contents>
+					<colinfo id="G2G코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="G2G코드명" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsPreStep">
+				<Contents>
+					<colinfo id="이미지키" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우스텝구분" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsBankReg">
+				<Contents>
+					<colinfo id="G2G업무유형구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="이미지키" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우스텝구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="이전워크플로우스텝구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="변경전계좌" size="256" summ="default" type="STRING"/>
+					<colinfo id="변경전일련" size="256" summ="default" type="STRING"/>
+					<colinfo id="변경후계좌" size="256" summ="default" type="STRING"/>
+					<colinfo id="변경후일련" size="256" summ="default" type="STRING"/>
+					<colinfo id="계좌중복여부" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDetail">
+				<Contents>
+					<colinfo id="워크플로우ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우스텝구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="이미지키" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우맵구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우상태코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="최종변경작업코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="최초등록일시" size="256" summ="default" type="STRING"/>
+					<colinfo id="최종변경일시" size="256" summ="default" type="STRING"/>
+					<colinfo id="최종변경자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="부점코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="부점구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="생성부점코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="센터은행코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="센터부점코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="반송사유코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="G2G업무유형구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="은행코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="처리유형" size="256" summ="default" type="STRING"/>
+					<colinfo id="삭제여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="연동거래여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="주민사업자번호" size="2" summ="default" type="STRING"/>
+					<colinfo id="개인법인구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="기준일" size="256" summ="default" type="STRING"/>
+					<colinfo id="변경여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="전화번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="이용자번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객명" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="전자금융신청종류코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객정보확인여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="항목별점검결과내용" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객정보변경여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="아이템수정여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객변경이력확인여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="인감사용여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="인감등록여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="인감이미지등록여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="계좌번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="서브계좌일련번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="카드접수번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="신용카드번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="초입금여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="분할일련번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="계정과목코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="신규일" size="256" summ="default" type="STRING"/>
+					<colinfo id="내부거래구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="기타변경내용" size="256" summ="default" type="STRING"/>
+					<colinfo id="처리여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="connMenuChk" size="256" summ="default" type="STRING"/>
+					<colinfo id="검수워크플로맵구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="검수워크플로우스텝구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="검수워크플로우ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="자택전화번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="자동이체신청코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="자동납부신청코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="취급자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="최종변경자명" size="256" summ="default" type="STRING"/>
+					<colinfo id="자택전화등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="직장전화등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="휴대폰등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="자택주소등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="직장주소등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="이메일등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="DM발송등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="TM등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="기타등록오류여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="요구불" size="256" summ="default" type="STRING"/>
+					<colinfo id="적립식" size="256" summ="default" type="STRING"/>
+					<colinfo id="거치식" size="256" summ="default" type="STRING"/>
+					<colinfo id="신탁" size="256" summ="default" type="STRING"/>
+					<colinfo id="투신" size="256" summ="default" type="STRING"/>
+					<colinfo id="종금" size="256" summ="default" type="STRING"/>
+					<colinfo id="채권" size="256" summ="default" type="STRING"/>
+					<colinfo id="외화예금" size="256" summ="default" type="STRING"/>
+					<colinfo id="모계좌번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="자택전화등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="직장전화등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="휴대폰등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="자택주소등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="직장주소등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="이메일등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="DM발송등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="TM등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="기타등록오류점검여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객자격" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우맵구분명" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우스텝구분명" size="256" summ="default" type="STRING"/>
+					<colinfo id="사본구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="조회구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="사용시스템구분" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsRsndRsn">
+				<Contents>
+					<colinfo id="G2G코드" size="2" summ="default" type="STRING"/>
+					<colinfo id="G2G코드명" size="256" summ="default" type="STRING"/>
+					<colinfo id="G2G출력코드명" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsImage">
+				<Contents>
+					<colinfo id="이미지키" size="256" summ="default" type="STRING"/>
+					<colinfo id="이미지ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="XTORM이미지ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="문서양식코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="맵문서양식명" size="256" summ="default" type="STRING"/>
+					<colinfo id="참조이미지키" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsLegacy">
+				<Contents>
+					<colinfo id="표시순서" size="256" summ="default" type="STRING"/>
+					<colinfo id="화면ID" size="255" summ="default" type="STRING"/>
+					<colinfo id="화면명" size="255" summ="default" type="STRING"/>
+					<colinfo id="완료여부" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDataField">
+				<Contents>
+					<colinfo id="swfImageKey" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfBankCode" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfBranchCode" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfRushYN" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfApproveYN" size="1" summ="default" type="STRING"/>
+					<colinfo id="swfCenterScanYN" size="1" summ="default" type="STRING"/>
+					<colinfo id="B1" size="7" summ="default" type="STRING"/>
+					<colinfo id="B2" size="7" summ="default" type="STRING"/>
+					<colinfo id="B3" size="7" summ="default" type="STRING"/>
+					<colinfo id="para" size="256" summ="default" type="STRING"/>
+					<colinfo id="C1" size="256" summ="default" type="STRING"/>
+					<colinfo id="C2" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfCnm" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfTotalAmount1" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfAcno" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfIssueStand" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfLastUpdtmnID" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfLastUpdtWorkCd" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfSubWork" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfPabuno" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfIndvCorpType" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfActitc" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfCno" size="256" summ="default" type="STRING"/>
+					<colinfo id="iwfSignCnt" size="256" summ="default" type="STRING"/>
+					<colinfo id="iwfStepCnt" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfCdno" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfKindCd" size="256" summ="default" type="STRING"/>
+					<colinfo id="swfRejectYn" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsProcess">
+				<Contents>
+					<colinfo id="G2G업무유형구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="이미지키" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우맵구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="워크플로우스텝구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="생성자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="취급자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="응답코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="응답명" size="256" summ="default" type="STRING"/>
+					<colinfo id="은행코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="부점코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="queueName" size="256" summ="default" type="STRING"/>
+					<colinfo id="전달사항" size="256" summ="default" type="STRING"/>
+					<colinfo id="다음그룹명" size="256" summ="default" type="STRING"/>
+					<colinfo id="다음사용자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="다음스텝ID" size="256" summ="default" type="STRING"/>
+					<colinfo id="물류바코드번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="물류생성여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="에이전트사용여부" size="256" summ="default" type="STRING"/>
+					<colinfo id="처리유형" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiSend">
+				<Contents>
+					<colinfo id="고객번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="기준일" size="256" summ="default" type="STRING"/>
+					<colinfo id="부점코드" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiRecv">
+				<Contents>
+					<colinfo id="변경여부" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsDI">
+				<Contents>
+					<colinfo id="G2G업무유형구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="문서코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="문서구분코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="부점코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="생성일시" size="256" summ="default" type="STRING"/>
+					<colinfo id="생성자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="취급자직번" size="256" summ="default" type="STRING"/>
+					<colinfo id="이미지키" size="256" summ="default" type="STRING"/>
+					<colinfo id="입력구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="맵구분코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="고객명" size="256" summ="default" type="STRING"/>
+					<colinfo id="계좌번호" size="256" summ="default" type="STRING"/>
+					<colinfo id="거래일" size="256" summ="default" type="STRING"/>
+					<colinfo id="처리시작일" size="256" summ="default" type="STRING"/>
+					<colinfo id="처리종료일" size="256" summ="default" type="STRING"/>
+					<colinfo id="합계건수" size="256" summ="default" type="STRING"/>
+					<colinfo id="합계금액" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsCnoList">
+				<Contents></Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiRecv_0">
+				<Contents>
+					<colinfo id="처리결과" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiSend_0">
+				<Contents>
+					<colinfo id="처리구분" size="2" summ="default" type="STRING"/>
+					<colinfo id="이미지키" size="35" summ="default" type="STRING"/>
+					<colinfo id="이미지일련번호" size="22" summ="default" type="STRING"/>
+					<colinfo id="문서양식코드" size="11" summ="default" type="STRING"/>
+					<colinfo id="이미지ID" size="10" summ="default" type="STRING"/>
+					<colinfo id="은행코드" size="2" summ="default" type="STRING"/>
+					<colinfo id="부점코드" size="4" summ="default" type="STRING"/>
+					<colinfo id="취급자직번" size="7" summ="default" type="STRING"/>
+					<colinfo id="취급자명" size="50" summ="default" type="STRING"/>
+					<colinfo id="생성일시" size="14" summ="default" type="STRING"/>
+					<colinfo id="주민사업자번호" size="13" summ="default" type="STRING"/>
+					<colinfo id="가족주민번호" size="13" summ="default" type="STRING"/>
+					<colinfo id="처리일시" size="14" summ="default" type="STRING"/>
+					<colinfo id="신규여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="작업구분" size="1" summ="default" type="STRING"/>
+					<colinfo id="반송사유" size="500" summ="default" type="STRING"/>
+					<colinfo id="사진카드여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="심사대상여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="에러여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="완료여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="최종여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="카드접수번호" size="17" summ="default" type="STRING"/>
+					<colinfo id="신청번호" size="20" summ="default" type="STRING"/>
+					<colinfo id="시스템구분" size="1" summ="default" type="STRING"/>
+					<colinfo id="요청일시" size="14" summ="default" type="STRING"/>
+					<colinfo id="취소요청시간" size="14" summ="default" type="STRING"/>
+					<colinfo id="고객명" size="50" summ="default" type="STRING"/>
+					<colinfo id="월소득" size="15" summ="default" type="STRING"/>
+					<colinfo id="동의서징구여부" size="1" summ="default" type="STRING"/>
+					<colinfo id="신분증종류" size="2" summ="default" type="STRING"/>
+					<colinfo id="발행일자" size="8" summ="default" type="STRING"/>
+					<colinfo id="발급권자" size="32" summ="default" type="STRING"/>
+					<colinfo id="직업군" size="2" summ="default" type="STRING"/>
+					<colinfo id="상세직업군" size="4" summ="default" type="STRING"/>
+					<colinfo id="주거형태" size="1" summ="default" type="STRING"/>
+					<colinfo id="유치점기관코드" size="3" summ="default" type="STRING"/>
+					<colinfo id="유치점번호" size="4" summ="default" type="STRING"/>
+					<colinfo id="유치자구분코드" size="1" summ="default" type="STRING"/>
+					<colinfo id="유치자코드" size="11" summ="default" type="STRING"/>
+					<colinfo id="유치경로코드" size="3" summ="default" type="STRING"/>
+					<colinfo id="요청사유" size="200" summ="default" type="STRING"/>
+					<colinfo id="신청서작성일자" size="14" summ="default" type="STRING"/>
+					<colinfo id="스텝" size="3" summ="default" type="STRING"/>
+					<colinfo id="영업점장명" size="50" summ="default" type="STRING"/>
+					<colinfo id="영업점장직번" size="7" summ="default" type="STRING"/>
+					<colinfo id="시작시간" size="14" summ="default" type="STRING"/>
+					<colinfo id="종료시간" size="14" summ="default" type="STRING"/>
+					<colinfo id="가맹점번호" size="11" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiItemList"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiBaseList"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsNewSearchFlag">
+				<Contents>
+					<colinfo id="G2G코드" size="256" summ="default" type="STRING"/>
+					<colinfo id="G2G코드명" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiItemListTB"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiBaseListTB"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiRecvDataTB"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsEaiSendDataTB"></Dataset>
+			<Dataset DataSetType="Dataset" Id="dsSendDataTB">
+				<Contents>
+					<colinfo id="이미지키" size="225" summ="default" type="STRING"/>
+					<colinfo id="업무구분" size="225" summ="default" type="STRING"/>
+					<colinfo id="맵구분" size="256" summ="default" type="STRING"/>
+					<colinfo id="상태코드" size="225" summ="default" type="STRING"/>
+					<colinfo id="여신취급번호" size="256" summ="default" type="STRING"/>
+				</Contents>
+			</Dataset>
+		</Datasets>
+		<Static Color="user24" Font="돋움,10,Bold" Height="17" Id="lblImge" Left="20" TabOrder="1" Text="이미지목록" Top="43" Width="140"></Static>
+		<Image Align="Left" Height="5" Id="Image0" ImageID="bullet_orangeround" Left="11" TabOrder="5" TabStop="FALSE" Top="47" Width="5"></Image>
+		<Static Color="user24" Font="돋움,10,Bold" Height="17" Id="lblLegacy" Left="20" TabOrder="3" Text="연동목록" Top="195" Width="140"></Static>
+		<Image Align="Left" Height="5" Id="Image6" ImageID="bullet_orangeround" Left="11" TabOrder="4" TabStop="FALSE" Top="198" Width="5"></Image>
+		<Tab Border="Flat" BorderColor="user21" Color="user25" DisableColor="user11" Face3dColor="user23" FixedImage="FALSE" Font="돋움,9,Bold" Height="429" Id="tabWorkDetail" Left="8" MouseOverColor="user26" SelColor="user26" TabOrder="2" Top="338" Width="264">
+			<Contents>
+				<TabPage BorderColor="user37" Color="user23" Font="돋움,9" Height="402" HilightTextColor="user23" Id="tabBaseInfo" ImageID="tab_basicbg4" Left="2" Light3dColor="user23" ShadowColor="user23" TabOrder="21" Text="기본정보" Top="25" Width="260">
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="80" Id="lblHead1" Left="2" TabOrder="1" Text="거래종류" Top="-1" VAlign="Middle" Width="100"></Static>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="25" Id="lblHead2" Left="2" TabOrder="0" Text="주민/사업자&#13;&#10;번호" Top="107" VAlign="Middle" Width="100"></Static>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="25" Id="lblHead3" Left="2" TabOrder="1" Text="계좌번호" Top="134" VAlign="Middle" Width="100"></Static>
+					<Radio BindDataset="dsDetail" BKColor="user1" Border="Flat" CodeColumn="코드" Color="user24" Column="내부거래구분" DataColumn="코드명" Height="79" Id="rdoTrKind" INDEX="-1" InnerDataset="dsTrKind" Left="107" OnClick="tabWorkDetail_tabBaseInfo_rdoTrKind_OnClick" Style="style_checkradio_essential" TabOrder="0" Top="1" Width="136"></Radio>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="25" Id="lblHead4" Left="3" TabOrder="3" Text="초입금0원계좌&#10;(실명미확인)" Top="350" VAlign="Middle" Width="100"></Static>
+					<Checkbox BindDataset="dsDetail" Column="초입금여부" FalseValue="N" Height="16" Id="chkFirIamtAcno" Left="106" Style="style_checkradio" TabOrder="13" Top="353" TrueValue="Y" Width="56"></Checkbox>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,9,Bold" Height="25" Id="Static0" Left="2" TabOrder="0" Text="인감/서명&#13;&#10;이미지사용여부" Top="80" VAlign="Middle" Width="100"></Static>
+					<Checkbox BindDataset="dsDetail" Column="인감사용여부" FalseValue="N" Height="16" Id="chkSealUseYn" Left="110" Style="style_checkradio" TabOrder="1" Top="83" TrueValue="Y" Width="56"></Checkbox>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="26" Id="Static1" Left="2" TabOrder="1" Text="서브계좌&#13;&#10;일련번호" Top="161" VAlign="Middle" Width="100"></Static>
+					<Edit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user11" Color="user10" Column="분할일련번호" Height="20" Id="edtSubAcnoSeq" ImeMode="none" Left="106" MaxLength="3" Number="TRUE" OnKillFocus="tabWorkDetail_tabBaseInfo_meAcno_OnKillFocus" Style="style_common" TabOrder="4" Top="167" Width="34"></Edit>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="25" Id="Static2" Left="2" TabOrder="3" Text="고객번호" Top="189" VAlign="Middle" Width="100"></Static>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="24" Id="Static3" Left="2" TabOrder="14" Text="고객명" Top="216" VAlign="Middle" Width="100"></Static>
+					<Edit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user15" CheckLength="Byte" Color="user24" Column="고객명" Height="19" Id="edtCnm" ImeMode="keep,native" Left="106" MaxLength="48" Style="style_essential" TabOrder="7" Top="222" UpperOnly="TRUE" Width="137"></Edit>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="25" Id="Static4" Left="2" TabOrder="16" Text="개인법인구분" Top="243" VAlign="Middle" Width="100"></Static>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="25" Id="Static5" Left="2" TabOrder="18" Text="영업점카드&#13;&#10;발급등록" Top="271" VAlign="Middle" Width="100"></Static>
+					<Radio BindDataset="dsDetail" BKColor="user23" Border="Flat" CodeColumn="코드" Color="user24" Column="처리여부" ColumnCount="4" DataColumn="코드명" Height="20" Id="rdoCardIsueReg" INDEX="-1" InnerDataset="dsCardIsueReg" Left="106" OnClick="tabWorkDetail_tabBaseInfo_rdoCardIsueReg_OnClick" Style="style_checkradio" TabOrder="10" Top="273" Width="138"></Radio>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="24" Id="Static6" Left="2" TabOrder="19" Text="신용카드&#13;&#10;접수번호" Top="298" VAlign="Middle" Width="100"></Static>
+					<Static BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="24" Id="Static7" Left="2" TabOrder="20" Text="신용(체크)&#10;카드번호" Top="324" VAlign="Middle" Width="100"></Static>
+					<MaskEdit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user15" Color="user24" Column="주민사업자번호" DomainID="utype.req.pabuno" Font="돋움,9" Height="20" Id="mePabuno" Left="106" Mask="#############" MaxLength="13" OnKillFocus="tabWorkDetail_tabBaseInfo_mePabuno_OnKillFocus" Style="style_essential" TabOrder="2" Top="107" Type="STRING" UserData="SKIPVALID=Y" Width="138"></MaskEdit>
+					<Radio BindDataset="dsDetail" BKColor="user23" Border="Flat" CodeColumn="G2G코드" Color="user24" Column="개인법인구분" ColumnCount="4" DataColumn="G2G코드명" Height="20" Id="rdoIndvCorpType" INDEX="-1" InnerDataset="dsIndvCorpType" Left="106" OnClick="tabWorkDetail_tabBaseInfo_rdoIndvCorpType_OnClick" Style="style_checkradio" TabOrder="8" Top="246" Width="138"></Radio>
+					<MaskEdit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user11" Color="user10" Column="계좌번호" DisplayComma="FALSE" DomainID="utype.def.allacno" Font="돋움,9" Height="20" Id="meAcno" Left="106" Mask="###ZZZ#######" MaxLength="14" OnKillFocus="tabWorkDetail_tabBaseInfo_meAcno_OnKillFocus" Style="style_common" TabOrder="3" Top="133" Type="STRING" Width="138"></MaskEdit>
+					<Edit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user11" Color="user10" Column="카드접수번호" Height="19" Id="edtRecpNo" Left="106" MaxLength="13" OnKillFocus="tabWorkDetail_tabBaseInfo_edtRecpNo_OnKillFocus" Style="style_common" TabOrder="11" Top="301" Width="138"></Edit>
+					<MaskEdit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user11" Color="user10" Column="신용카드번호" DomainID="utype.def.cardno" Font="돋움,9" Height="20" Id="meCdNo" Left="106" Mask="####-####-####-####" MaxLength="16" Style="style_common" TabOrder="12" Top="328" Type="STRING" Value="MaskEdit0" Width="138"></MaskEdit>
+					<MaskEdit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user11" Color="user10" Column="고객번호" DomainID="utype.def.cno" Font="돋움,9" Height="20" Id="meCno" Left="106" Mask="#############" MaxLength="13" OnKillFocus="tabWorkDetail_tabBaseInfo_mePabuno_OnKillFocus" Style="style_common" TabOrder="5" Top="195" Type="STRING" Width="114"></MaskEdit>
+					<MaskEdit AutoSelect="TRUE" AutoSkip="TRUE" BindDataset="dsDetail" Border="Flat" BorderColor="user11" Color="user10" Column="고객구분" DisplayComma="FALSE" DomainID="utype.def.cnotype" Font="돋움,9" Height="20" Id="meCtype" Left="226" Mask="Z" MaxLength="14" OnKillFocus="tabWorkDetail_tabBaseInfo_meAcno_OnKillFocus" Style="style_common" TabOrder="6" Top="194" Type="STRING" Width="18"></MaskEdit>
+				</TabPage>
+				<TabPage BorderColor="user37" Font="돋움,9" Height="402" Id="tabMsg" ImageID="tab_basicbg4" Left="2" TabOrder="21" Text="전달사항" Top="25" Width="260">
+					<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="107" Id="lblBfDlvrCntn" Left="-2" TabOrder="3" Text="받은&#10;전달사항" Top="-2" VAlign="Middle" Width="74"></Static>
+					<TextArea Border="Flat" Height="107" Id="txtBfDlvrCntn" Left="75" Readonly="TRUE" Style="style_common" TabOrder="1" VScroll="TRUE" Width="186"></TextArea>
+					<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="39" Id="lblRsndRsn" Left="-2" TabOrder="5" Text="반송사유" Top="98" VAlign="Middle" Width="74"></Static>
+					<Combo Border="Flat" BorderColor="user11" CodeColumn="G2G코드" Color="user10" DataColumn="G2G출력코드명" Font="돋움,9" Height="28" Id="cboRsndRsn" INDEX="0" InnerDataset="dsRsndRsn" Left="74" OnCloseUp="tabWorkDetail_tabMsg_cboRsndRsn_OnCloseUp" Style="style_common" TabOrder="6" Top="105" Width="189"></Combo>
+					<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="144" Id="lblAfDlvrCntn" Left="-2" TabOrder="4" Text="보낼&#10;전달사항" Top="131" VAlign="Middle" Width="74"></Static>
+					<TextArea Border="Flat" Height="144" Id="txtAfDlvrCntn" ImeMode="keep,native" Left="75" Style="style_common" TabOrder="2" Top="133" VScroll="TRUE" Width="186"></TextArea>
+				</TabPage>
+			</Contents>
+		</Tab>
+		<Button ButtonStyle="TRUE" Color="user32" Cursor="HAND" Font="돋움,8" Height="20" Id="btnClose" ImageID="btn_relation_bg2" Left="229" OnClick="btnClose_OnClick" TabOrder="6" TabStop="FALSE" Text="목&#32;록" Top="42" Width="42"></Button>
+		<Image Align="Left" Height="13" Id="Image1" ImageID="bullet_orangearrow" Left="10" LeftMargin="0" TabOrder="7" TabStop="FALSE" Top="16" Width="9"></Image>
+		<Static Color="user24" Font="돋움,11,Bold" Height="15" Id="lblTitle" Left="22" TabOrder="8" Text="수신&#32;|&#32;신규&#32;|&#32;상세&#32;" Top="15" Width="256"></Static>
+		<Button ButtonStyle="TRUE" Color="user32" Cursor="HAND" Font="돋움,8" Height="20" Id="btnHistory" ImageID="btn_relation_bg2" Left="181" OnClick="btnHistory_OnClick" TabOrder="8" TabStop="FALSE" Text="이&#32;력" Top="42" Width="42"></Button>
+		<Button ButtonStyle="TRUE" Color="white" Cursor="HAND" Font="돋움,8,Bold" Height="20" Id="btnSave" ImageID="btn_handling_bg" Left="228" OnClick="btnSave_OnClick" TabOrder="9" TabStop="FALSE" Text="저장" Top="809" Width="43"></Button>
+		<Static BKColor="user19" BorderColor="white" Color="user31" Font="돋움,10,Bold" Height="20" Id="lblCnoInfoChng" Left="12" TabOrder="11" Text="고객정보변경" Top="309" VAlign="Middle" Width="101"></Static>
+		<Checkbox BindDataset="dsDetail" Column="고객정보변경여부" FalseValue="N" Height="16" Id="chkCnoInfoChng" Left="119" OnClick="chkCnoInfoChng_OnClick" Style="style_checkradio" TabOrder="1" Top="312" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+		<Checkbox BindDataset="dsDetail" Column="아이템수정여부" FalseValue="N" Height="16" Id="chkItemUpdt" Left="103" Style="style_checkradio" TabOrder="3" Top="778" TrueValue="Y" Value="FALSE" Width="40"></Checkbox>
+		<Static Align="Center" BKColor="user19" BorderColor="white" Color="user31" Font="돋움,10,Bold" Height="22" Id="lblItemUpdt" Left="11" TabOrder="14" Text="아이템수정" Top="776" VAlign="Middle" Width="90"></Static>
+		<Button ButtonStyle="TRUE" Color="white" Cursor="HAND" Font="돋움,8,Bold" Height="20" Id="btnCnfm" ImageID="btn_handling_bg" Left="228" OnClick="btnCnfm_OnClick" TabOrder="10" TabStop="FALSE" Text="확인" Top="842" Visible="FALSE" Width="43"></Button>
+		<Div Height="137" Id="DivInspRslt" Left="1" TabOrder="11" TabStop="FALSE" Text="Div0" Top="877" Visible="FALSE" Width="267">
+			<Contents>
+				<Shape BKColor="user23" Bottom="121" Height="98" Id="shpInspRslt" Left="14" LineColor="user21" Right="263" TabOrder="22" Top="23" Type="Rectangle" Width="249"></Shape>
+				<Checkbox BindDataset="dsDetail" Column="기타등록오류여부" FalseValue="N" Height="16" Id="chkEtcInspRslt" Left="240" Style="style_checkradio" TabOrder="1" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="TM등록오류여부" FalseValue="N" Height="16" Id="chkTmInspRslt" Left="214" Style="style_checkradio" TabOrder="2" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="DM발송등록오류여부" FalseValue="N" Height="16" Id="chkDmInspRslt" Left="187" Style="style_checkradio" TabOrder="3" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="이메일등록오류여부" FalseValue="N" Height="16" Id="chkEmaiInspRslt" Left="158" Style="style_checkradio" TabOrder="4" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="직장주소등록오류여부" FalseValue="N" Height="16" Id="chkOffcAddrInspRslt" Left="132" Style="style_checkradio" TabOrder="5" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="자택주소등록오류여부" FalseValue="N" Height="16" Id="chkHomeAddrInspRslt" Left="104" Style="style_checkradio" TabOrder="6" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="휴대폰등록오류여부" FalseValue="N" Height="16" Id="chkHpInspRslt" Left="77" Style="style_checkradio" TabOrder="7" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="직장전화등록오류여부" FalseValue="N" Height="16" Id="chkOffcTelInspRslt" Left="49" Style="style_checkradio" TabOrder="8" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Checkbox BindDataset="dsDetail" Column="자택전화등록오류여부" FalseValue="N" Height="16" Id="chkHomeTelInspRslt" Left="21" Style="style_checkradio" TabOrder="9" Top="98" TrueValue="Y" Value="FALSE" Width="15"></Checkbox>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="69" Id="lblInspRslt11" Left="234" TabOrder="10" Text="기&#10;타" Top="27" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="69" Id="lblInspRslt10" Left="207" TabOrder="11" Text="TM" Top="26" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="69" Id="lblInspRslt9" Left="180" TabOrder="12" Text="DM&#10;발송" Top="26" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="69" Id="lblInspRslt8" Left="153" TabOrder="13" Text="E-&#10;mail" Top="26" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="46" Id="lblInspRslt7" Left="126" TabOrder="14" Text="직&#10;장" Top="49" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="46" Id="lblInspRslt6" Left="98" TabOrder="15" Text="자&#10;택" Top="49" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="22" Id="lblInspRslt5" Left="98" TabOrder="16" Text="주&#32;소" Top="26" VAlign="Middle" Width="54"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="69" Id="lblInspRslt4" Left="71" TabOrder="17" Text="H&#10;P" Top="26" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="46" Id="lblInspRslt3" Left="44" TabOrder="18" Text="직&#10;장" Top="49" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="46" Id="lblInspRslt2" Left="16" TabOrder="19" Text="자&#10;택" Top="49" VAlign="Middle" Width="26"></Static>
+				<Static Align="Center" BKColor="user19" BorderColor="user34" Color="user31" Font="돋움,10,Bold" Height="22" Id="lblInspRslt1" Left="16" TabOrder="20" Text="전&#32;화" Top="26" VAlign="Middle" Width="54"></Static>
+				<Static Color="user24" Font="돋움,10,Bold" Height="17" Id="lblInspRslt" Left="20" TabOrder="21" Text="항목별점검결과" Top="3" Width="140"></Static>
+				<Image Align="Left" Height="5" Id="imgInspRslt" ImageID="bullet_orangeround" Left="11" TabOrder="23" Top="7" Width="5"></Image>
+			</Contents>
+		</Div>
+		<Static Height="8" Id="Static0" Left="15" TabOrder="17" Top="997" Width="19"></Static>
+		<Grid AutoScrollBar="Vert" BindDataset="dsLegacy" BKColor="white" BkColor2="white" BkSelColor="user0" BoldHead="true" Border="Flat" BorderColor="user11" Bottom="302" CellMoving="TRUE" Color="user4" Enable="true" EndLineColor="default" Face3dColor="white" Height="91" Id="grdLegacy" InputPanel="FALSE" Left="10" LineColor="default" OnCellDBLClick="grdLegacy_OnCellDblClick" Right="272" SelColor="user4" TabOrder="12" TabStop="FALSE" Top="211" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="262">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="261"/>
+					</columns>
+					<body>
+						<cell bkcolor="expr:iif(&#32;완료여부&#32;==&#32;&apos;Y&apos;,&#32;&apos;silver&apos;,&#32;&apos;User&#32;Color&#32;1&apos;)" button3d="false" col="0" colid="화면명" display="text" scrollbar="vert"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Grid AutoScrollBar="Vert" BindDataset="dsImage" BKColor="white" BkColor2="white" BkSelColor="user0" BoldHead="true" Border="Flat" BorderColor="user11" Bottom="187" CellMoving="TRUE" Color="user4" Enable="true" EndLineColor="default" Face3dColor="white" Height="123" Id="grdImage" InputPanel="FALSE" Left="8" LineColor="default" OnCellClick="grdImage_OnCellClick" Right="270" SelColor="user4" TabOrder="13" TabStop="FALSE" Top="64" UseDBuff="true" UsePopupMenu="true" UseSelColor="true" Visible="true" VLineColor="default" WheelScrollRow="1" Width="262">
+			<contents>
+				<format id="Default">
+					<columns>
+						<col width="261"/>
+					</columns>
+					<body>
+						<cell button3d="false" col="0" colid="맵문서양식명" display="text" scrollbar="vert"/>
+					</body>
+				</format>
+			</contents>
+		</Grid>
+		<Shape Bottom="837" Height="28" Id="shpResponse" Left="16" LineColor="user21" Right="223" TabOrder="20" Top="809" Type="Rectangle" Visible="FALSE" Width="207"></Shape>
+		<Checkbox BindDataset="dsDetail" Column="사본구분" FalseValue="0" Height="16" Id="chkDplcType" Left="256" Style="style_checkradio" TabOrder="22" Top="312" TrueValue="1" Value="FALSE" Width="15"></Checkbox>
+		<Static BKColor="user19" BorderColor="white" Color="user31" Font="돋움,10,Bold" Height="22" Id="lblDplcType" Left="148" TabOrder="21" Text="신분증사본사용" Top="310" VAlign="Middle" Width="101"></Static>
+		<Button ButtonStyle="TRUE" Color="user32" Cursor="HAND" Font="돋움,8" Height="20" Id="btnAppendScan" ImageID="btn_relation_bg4" Left="114" OnClick="btnAppendScan_OnClick" TabOrder="23" TabStop="FALSE" Text="추가스캔" Top="42" Visible="FALSE" Width="58"></Button>
+		<Button ButtonStyle="TRUE" Color="user33" Cursor="HAND" DisableColor="user0" Font="돋움,8,Bold" Height="20" Id="btnReload" ImageID="btn_etc_bg7" Left="173" OnClick="btnReload_OnClick" TabOrder="24" Text="이미지&#32;가져오기" Top="189" Width="98"></Button>
+	</Form>
+	<Script><![CDATA[
+/**  
+ * 프로그램명 : DP0101_Detail
+ * 개      요 : 예금거래신규업무 상세 화면
+ * 작  성  일 : 2008.12.10  
+ * 작  성  자 : 윤완혁
+ * -------------------------------------------------------
+ * 수정자/수정일 : 이태식 2009.12.06
+ * 수정사유/내역 : [M0911-1722]책임자로그인시 서브계좌일련번호 
+ *                 수정가능하게 변경
+ * -------------------------------------------------------
+ * 수정자/수정일 : 조성민 2010.10.25
+ * 수정사유/내역 : [M1009-0487]
+ *                 신규  002스텝의 반송건 처리시 계좌번호가 수신예금거래신규테이블에 중복저장이 가능하게 처리
+ *                 신규  책임자 999스텝의 반송건 처리시 계좌번호가 수신예금거래신규테이블에 중복저장이 가능하게 처리 
+ * -------------------------------------------------------
+ * 수정자/수정일 : 은정옥 2011.01.20
+ * 수정사유/내역 : [M1012-0485]
+ *                 002스텝의 반송 건 취소시 계좌번호 및 서브계좌일련번호 변경 여부 체크하여 처리
+ * -------------------------------------------------------
+ * 수정자/수정일 : 임지환 2010.11.30
+ * 수정사유/내역 : 심스 업무 개선 관련 심스 이미지 정보 전송 처리 변경
+                   심스 전송 후 Dispatch.
+ * -------------------------------------------------------   
+ * 수정자/수정일 : 이미옥 2012.11.05
+ * 수정사유/내역 : [M1210-0833] G2G 프레임웍 로그분석을 통한 프로그램 기능개선(G2G수신업무)
+ *              신규 책임자로그인시 999스텝의 완료건 신용(체크)카드번호 수정,저장 가능하게 처리 
+ * --------------------------------------------------------
+ * 수정자/수정일 : 조형호/2013.01.18
+ * 수정사유/내역 : [M1209-0542] XTORM이미지ID 추가
+ *                 GV_WORKFLOID -> GV_USERID 변경
+ * -------------------------------------------------------
+ * 수정자/수정일 : 박승영/2013.08.20
+ * 수정사유/내역 : [M1308-0162] G2G 수신 반송코드 일괄 변경
+ *                 - 신이미지반송사유코드 공통코드 추가
+ *                 - 이미지반송사유코드 -> 신이미지반송사유코드 변경
+ * -------------------------------------------------------
+ * 수정자/수정일 : 배석헌/ 2013.12.03
+ * 수정사유/내역 : [P1308-0004] 『소형스캐너를 활용한 신분증전용스캔 프로세스 신설 』프로젝트
+ *                 - 신분증스캔 런치건 추가스캔버튼 생성
+ *                 - 이미지 가져오기 버튼 추가 : 이미지목록 리로드
+ * -------------------------------------------------------
+ */	
+#include "script::CommonUtil.js";
+#include "script::LegacyUtil.js";
+#include "script::DP_CommonUtil.js";
+#include "script::EaiUtil.js";
+
+
+var scrnNo = "DP0101D_001";  // 화면ID
+
+var imageKey;
+var workType;
+var mapId; //맵ID
+var stepId; //스텝ID
+var workfloId; //워크플로우ID
+var routeInfo; //라우트정보
+var responseName; //응답명
+var responseId;   /* 버튼id */
+
+var dupValue = ""; //주민사업자번호 중복체크값
+var flag; //중복거래유무
+var myflag;   //내거래유무
+
+var oriPabuno= ""; //원 주민사업자번호 저장
+var editable = false; //수정 권한
+var tabForm ;
+var typeMemory ; //이전 거래종류 저장
+var msgYN = "N"; //메시지 표시여부
+
+var isDupAcnoValue; //계좌번호중복체크 
+var isDupCdnoValue; //카드접수번호중복체크
+var itemBackUp; //기존 아이템정보 저장
+
+/*품질관리,고객정보등록검수 화면에서 연결여부 체크값
+DP140   :고객정보검수목록에서 연결
+DP141   :불일치명세에서 연결
+AdminQuality    :품질관리에서 연결
+*/
+var connMenuChk;  
+var connStepID; //* 고객등록정보검수 화면에서 연결인경우 stepID
+var eaiReturnValue = ""; //eai 연계 return 값.
+
+var jobListType = ""; //workList:내작업목록 workCommonList:공통작업목록  그외: 리스트
+var popUpYn; //통합신규 popup 여부
+var detailType;
+var btnDupCheck = "N";
+var preStep = '111';   // 이전처리스텝  default prestep : '111'
+var preAcct = '111';   // 변경전계좌    default preAcct : '111'
+var preSubAcct = '111'; // 변경전일련    default preSubAcct : '111'
+var afterAcct = '111';   // 변경후계좌    default preAcct : '111'
+var afterSubAcct = '111';
+var chkAcct = "N" ;    // 계좌중복여부체크  Y:중복 ,N:중복아님
+
+var didEAI = "N";  /* 이미지 정보 EAI 선처리 여부  jw */
+var waitMsgToSims = "심스로 정보 전송중입니다.\n잠시만 기다려 주십시오..\n\n(완료되면 닫힙니다.)";
+
+var isTB = 'N';		// Tablet Branch 건 인지를 식별하기위한 flag , 기본값은 'N' 
+
+//var fromLink;
+/* =======================================================
+    Form
+   ======================================================= */
+//Form onLoad 시
+function form1_OnLoadCompleted(obj)
+{
+    
+    gfn_initScrnInfo(obj);  //화면 초기정보 공통함수 호출	
+    init();
+}
+
+/* =======================================================
+    이벤트
+   ======================================================= */
+// 닫기버튼 클릭시 이벤트 처리
+function btnClose_OnClick(obj)
+{
+
+    var strMessage = "";
+    /*
+    if (jobListType != "") {
+        jobListType = "endFunc=endDetail('" + jobListType + "')";
+        strMessage = jobListType;
+    }
+    */
+	UserNotify(CONSTANT_USERNOTIFY_CLOSE, "");
+}
+
+function tabWorkDetail_tabBaseInfo_mePabuno_OnKillFocus(obj)
+{   
+     getDupInfo(); 
+     customCheck();
+
+}
+
+//처리버튼 클릭시
+function btnResponseClick(obj)
+{
+    if (obj.Text == "완료" && stepId == "002" && preStep == "004") {
+        if (preAcct != tabWorkDetail.tabBaseInfo.meAcno.Value) {
+            gfn_msgDialog("계좌변경시 저장버튼을 눌러 저장하세요.", "ERR");
+            return;
+        }
+    }
+    //중복처리체크를 위해 추가
+    if (btnDupCheck == "Y") {
+        gfn_msgDialog("이미처리되었습니다. 재조회 후 다음 업무를 처리하세요.", "ERR");
+        return;        
+    }
+    processChek();    
+    validation(obj.Text, obj.Id);
+}
+
+//저장버튼 클릭시
+function btnSave_OnClick(obj)
+{
+    validation(obj.Text, obj.Id);
+}
+
+//확인버튼 클릭시
+function btnCnfm_OnClick(obj)
+{
+    //품질검수 에서 품질검수 점검항목 저장
+    setCsInfoQualCnr();
+}
+
+//이력보기
+function btnHistory_OnClick(obj)
+{
+  	viewHistory();		
+}
+
+function tabWorkDetail_tabBaseInfo_rdoTrKind_OnClick(obj)
+{
+    if (mapId == "92") { //외화예금 거래일때는 예금만 선택 가능하게 제한
+        if(tabForm.rdoTrKind.Value != 1) {
+            gfn_msgDialog("외화예금거래는 예금만 선택 할 수 있습니다.", "ERR");
+            tabForm.rdoTrKind.Value = 1;
+            return;
+        }
+        
+    }
+    typeCheck(tabWorkDetail.tabBaseInfo.rdoTrKind.Value);
+}
+
+function tabWorkDetail_tabBaseInfo_rdoIndvCorpType_OnClick(obj)
+{
+	indvCheck();
+}
+
+
+function tabWorkDetail_tabBaseInfo_rdoCardIsueReg_OnClick(obj)
+{
+	brcdCardCheck();
+}
+
+function tabWorkDetail_tabBaseInfo_edtRecpNo_OnKillFocus(obj)
+{
+	getDupInfo();	
+}
+
+function tabWorkDetail_tabBaseInfo_meAcno_OnKillFocus(obj)
+{
+    getDupInfo();		
+    manyAcnoChk(tabWorkDetail.tabBaseInfo.meAcno);
+}
+
+function tabWorkDetail_tabMsg_cboRsndRsn_OnCloseUp(obj,strCode,strText,nOldIndex,nNewIndex,bSelOK)
+{
+
+	var tabObj = tabWorkDetail.tabMsg;
+    var afDlvrCntnStr = tabWorkDetail.tabMsg.txtAfDlvrCntn.text;
+    tabObj.txtAfDlvrCntn.text = dp_getRsndRsnValue(dsRsndRsn.GetColumn(nNewIndex, "G2G코드"), dsRsndRsn.GetColumn(nNewIndex, "G2G출력코드명"), afDlvrCntnStr);		
+
+}
+
+/* =======================================================
+    Transaction
+   ======================================================= */
+//초기화
+function init() {
+    var tabForm = tabWorkDetail.tabBaseInfo;
+        
+    if (detailType != "view" && connMenuChk != "DP141") {
+        http.Sync = true;
+        gfn_getImageLegacyList(CONSTANT_WORKTYPE_DP, mapId, stepId, imageKey, "");
+        http.Sync = false;
+    } else {
+        http.Sync = true;
+        gfn_getImageList(CONSTANT_WORKTYPE_DP, imageKey);
+        http.Sync = false;
+
+    }
+    gfn_getCommonCdByDataset(CONSTANT_WORKTYPE_DP, "개인법인구분", dsIndvCorpType, "getComCd", "callback");
+    // 이미지반송사유코드 -> 신이미지반송사유코드 변경(공통코드추가)
+    gfn_getCommonCdByDataset(CONSTANT_WORKTYPE_DP,"신이미지반송사유코드",dsRsndRsn, "getdsRsndRsn", "callback");    
+
+    if (gfn_getIdtfMidScanYN(imageKey) == "Y") {
+		btnAppendScan.Visible = true;
+	}
+    
+    //gfn_setCookie("fromLink", "kkkkk");
+
+    //gfn_getCookie("fromLink");
+    //fromLink = GetVariable("fromLink","Local");
+    getDetail(imageKey);
+    getPreStep(imageKey);
+}
+
+// objAllMask 실행시 killfocus를 실행하기 위해 사용
+// mask 일때만 해당 있음.
+function EndKillFocus(obj)
+{
+    trace("EndKillFocus(obj.id):" + obj.id);
+    if (obj.id == "mePabuno") {
+        tabWorkDetail_tabBaseInfo_mePabuno_OnKillFocus(obj);
+    } else if (obj.id == "meAcno") {
+        tabWorkDetail_tabBaseInfo_meAcno_OnKillFocus(obj);
+    } else if (obj.id == "edtSubAcnoSeq") {
+        tabWorkDetail_tabBaseInfo_meAcno_OnKillFocus(obj);
+    } 
+}
+
+//상세 정보 조회
+function getDetail(imageKey) {
+   var strArg = "imageKey="+quote(imageKey);
+
+   gfn_transaction("getDetail","ng2g::/dp/dp0101.dp?goTo=getDetail","dsDetail=dsDetail:a",
+    "dsDetail=dsDetail",strArg,"callback");
+}
+
+//상세 PRESTEP 정보 조회
+function getPreStep(imageKey) {
+    var strArg = "imageKey="+quote(imageKey);
+    
+    gfn_transaction("getPreStep","ng2g::/dp/dp0101.dp?goTo=getPreStep","dsPreStep=dsPreStep:a",
+    "dsPreStep=dsPreStep",strArg,"callback");
+}
+
+//프로세스 진행
+function process(responseName, objId) {
+    var processType = "";
+
+    if (responseName == "저장" && preStep != "004" && stepId == "002")
+        processType = "save";
+    else if (responseName == "저장" && (preStep == "004" || stepId == "999")){
+        processType = "save2";
+    } else if(stepId == "001" && responseName == "완료") {	// Dubug code by lee
+		processType = "launch";
+		btnDupCheck = "Y";
+    } else {
+        processType = "dispatch";    
+        btnDupCheck = "Y";
+    }
+
+    var arg = "processType=" + quote(processType);    
+		arg +=" newSearchFlag="+dsdetail.GetColumn(0,"조회구분");
+	if (responseName == "") {
+        gfn_msgDialog("프로세스 처리내용(완료,저장,취소)을 선택하지 않았습니다","ERR"); 
+        return;
+	} else {
+        if (connMenuChk == "DP140") {
+            gfn_transaction("doProcess", "ng2g::/dp/dp0302.dp?goTo=doProcess",
+				"dsProcess=dsProcess:a dsDataField=dsDataField:a dsDetail=dsDetail:a", "dsProcess=dsProcess",
+				arg, "callback" , objId);
+        } else {
+            //if (processType == "save") {
+            //    gfn_transaction("doProcess", "ng2g::/dp/dp0101.dp?goTo=doProcess",
+			//	    "dsProcess=dsProcess:a dsDataField=dsDataField:a dsDetail=dsDetail:a dsDI=dsDI:a", "dsProcess=dsProcess",
+			//	    arg, "callback" , objId);
+		    //} else {
+		        gfn_transaction("doProcess", "ng2g::/dp/dp0101.dp?goTo=doProcess",
+				    "dsProcess=dsProcess:a dsDataField=dsDataField:a dsDetail=dsDetail:a dsDI=dsDI:a dsBankReg=dsBankReg:a", "dsProcess=dsProcess",
+				    arg, "callback" , objId);
+		    //}
+        }
+    }
+}
+
+//품질관리 항목별점검결과내역 저장
+function setCsInfoQualCnr() {
+    dsDetail.SetColumnNF(0, "connMenuChk", connMenuChk); 
+    dsDetail.SetColumnNF(0, "최종변경자직번", GV_USERID); 
+
+    var strArg = "imageKey=" + quote(imageKey);
+
+	gfn_transaction("setCsInfoQualCnr", "ng2g::/dp/dp0306.dp?goTo=setCsInfoQualCnr",
+				"dsDetail=dsDetail:a", "dsDetail=dsDetail",
+				strArg, "callback");   
+
+}
+
+//계좌번호,카드접수번호 중복체크
+function getDupInfo() {
+	if(stepId == "002" || stepId == "999") {		// 센터라면 계좌번호 검색하지 않는다.999스텝에서 저장시에도 체크
+		var acno = tabWorkDetail.tabBaseInfo.meAcno.Value;
+        var subAcno = tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Text;
+        var cdRcptNo = tabWorkDetail.tabBaseInfo.edtRecpNo.Text;
+        manyAcnoChk(tabWorkDetail.tabBaseInfo.meAcno);
+    
+    var strArg = "";
+        strArg += "acno=" + quote(acno);
+        strArg += " imageKey=" + quote(imageKey);
+        strArg += " subAcno=" + quote(subAcno);
+        strArg += " cdRcptNo=" + quote(cdRcptNo);
+        
+   gfn_transaction("getDupInfo","ng2g::/dp/dp0101.dp?goTo=getDupInfo","",
+    "",strArg,"callback");
+	}
+}
+
+/* =======================================================
+    기능함수
+   ======================================================= */
+//화면 구성 변경
+function cenCondChange(brcd) {
+
+    var mapId = dsDetail.GetColumn(0, "워크플로우맵구분");
+    
+	if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "1"){
+		TypeCheck(1);
+	}
+	else if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "2"){
+		TypeCheck(2);
+	}
+	else if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "3"){
+		TypeCheck(3);
+	}	
+
+    
+    if (brcd != CONSTANT_DP_CENTER) {
+        setProperty( "lblCnoInfoChng^chkCnoInfoChng^lblItemUpdt^chkItemUpdt^lblRsndRsn^cboRsndRsn^lblDplcType^chkDplcType", "Visible", false); 
+    } else {
+        if (connMenuChk == "AdminQuality" || connMenuChk == "DP140" || connMenuChk == "DP141") {
+            popUpYn = "N";
+            //gfn_tabCtrlPropFalse(this,"enable");
+            gfn_tabCtrlReadOnlyTrue(this);
+            setProperty( "chkCnoInfoChng^chkItemUpdt", "Enable", false);
+            DivInspRslt.Visible = true;
+            setProperty("btnSave", "Visible", false);
+
+            if (connMenuChk == "AdminQuality") { //품질관리에서 온경우
+                setProperty("btnCnfm", "Visible", true);
+                setProperty("btnSave", "Visible", false);
+                //품질관리인경우 점검항목내용 변경
+                //고객정보등록검수는 완료 버튼을 통해 저장하고,
+                //품질관리는 확인 버튼을 통해 저장 하도록 한다.
+                DivInspRslt.chkHomeTelInspRslt.Column = "자택전화등록오류점검여부";
+                DivInspRslt.chkOffcTelInspRslt.Column = "직장전화등록오류점검여부";
+                DivInspRslt.chkHpInspRslt.Column = "휴대폰등록오류점검여부";
+                DivInspRslt.chkHomeAddrInspRslt.Column = "자택주소등록오류점검여부";
+                DivInspRslt.chkOffcAddrInspRslt.Column = "직장주소등록오류점검여부";
+                DivInspRslt.chkEmaiInspRslt.Column = "이메일등록오류점검여부";
+                DivInspRslt.chkDmInspRslt.Column = "DM발송등록오류점검여부";
+                DivInspRslt.chkTmInspRslt.Column = "TM등록오류점검여부";
+                DivInspRslt.chkEtcInspRslt.Column = "기타등록오류점검여부";
+                setProperty("chkHomeTelInspRslt^chkOffcTelInspRslt^chkHpInspRslt^chkHomeAddrInspRslt", "Enable", true);
+                setProperty("chkOffcAddrInspRslt^chkEmaiInspRslt^chkDmInspRslt^chkTmInspRslt^chkEtcInspRslt", "Enable", true);
+
+            } else if (connMenuChk == "DP140" && connStepID != "999") {
+                setProperty("btnCnfm", "Visible", false);
+                setProperty("btnSave", "Visible", false);
+
+                setProperty("chkHomeTelInspRslt^chkOffcTelInspRslt^chkHpInspRslt^chkHomeAddrInspRslt", "Enable", true);
+                setProperty("chkOffcAddrInspRslt^chkEmaiInspRslt^chkDmInspRslt^chkTmInspRslt^chkEtcInspRslt", "Enable", true);
+            } else if (connMenuChk == "DP141") { 
+                setProperty("btnCnfm", "Visible", false);
+                setProperty("btnSave", "Visible", false); 
+                DivInspRslt.Visible = false;
+                grdLegacy.Enable = false;    
+            }
+            
+        } else {
+            setProperty("btnSave", "Visible", false);  
+            if (stepId == "003") {
+                if (editable) {
+                }
+                else { 
+                    //setProperty( "rdoTrKind^chkSealUseYn^chkFirIamtAcno^rdoCardIsueReg", "Enable", false); //ReadOnly, Enable
+                    setProperty( "rdoTrKind^chkSealUseYn^chkFirIamtAcno^rdoCardIsueReg^rdoIndvCorpType", "Enable", false); //ReadOnly, Enable
+                    setProperty( "meAcno^edtSubAcnoSeq^edtRecpNo^meCdNo", "ReadOnly", true); //ReadOnly, Enable
+                }
+            }
+            else if (stepId == "004") {
+                if (editable) {
+                }
+                else {
+                    //gfn_tabCtrlPropFalse(this,"enable");
+                    gfn_tabCtrlReadOnlyTrue(this);
+                    setProperty("cboRsndRsn^txtAfDlvrCntn", "Enable", true);
+                }
+            }
+        }
+    }
+
+    if (stepId == "002" || stepId == "999") {
+        itemBackUp = "기존데이타 ::::> 인감/서명 이미지 사용여부:" + tabWorkDetail.tabBaseInfo.chkSealUseYn.Value 
+		   + ", 주민사업자번호:" + tabWorkDetail.tabBaseInfo.mePabuno.Value
+		   + ", 계좌번호:" + tabWorkDetail.tabBaseInfo.meAcno.Value
+		   + ", 서브계좌일련번호:" + tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Text
+		   + ", 고객번호:" + tabWorkDetail.tabBaseInfo.meCno.Value
+		   + ", 고객구분:" + tabWorkDetail.tabBaseInfo.meCtype.Value
+		   + ", 고객명:" + tabWorkDetail.tabBaseInfo.edtCnm.Text
+		   + ", 개인법인구분:" + tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value ;
+    }
+
+
+
+    if (stepId == "004") {
+        //gfn_tabCtrlPropFalse(this,"enable");
+        gfn_tabCtrlReadOnlyTrue(this);
+        gfn_setProperty("txtAfDlvrCntn", "Enable", true);
+    }
+    if (detailType == "view") {
+        gfn_ctrlReadOnlyTrueByTabid(tabWorkDetail.tabBaseInfo);
+        //책임자로그인시 서브계좌일련번호 변경가능 이태식 2009.12.06
+        if (GV_APPROVEYN == "Y" && stepId == "999") {
+            setProperty("btnSave", "Visible", true);
+            setProperty("chkSealUseYn^rdoIndvCorpType^chkFirIamtAcno", "Enable", true);
+            setProperty("edtRecpNo", "Enable", false);
+            setProperty("mePabuno^meCno^edtCnm^meAcno^meCtype", "ReadOnly", false);
+            if (tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "Y") {
+				setProperty("meCdNo", "Enable", true);
+				setProperty("meCdNo", "ReadOnly", false);
+            }
+            var subAcnoChk = tabWorkDetail.tabBaseInfo.meAcno.Value.SubStr(0,3);
+			if (subAcnoChk == "739" || subAcnoChk == "809" || subAcnoChk == "747") {
+				setProperty("edtSubAcnoSeq", "ReadOnly", false);
+
+			}
+        } else 
+            setProperty("btnSave", "Visible", false);
+
+    }
+}
+
+function beforeValidation(responseName) { 
+	if (isDupAcnoValue == "true") {
+		gfn_msgDialog("이미 처리된 계좌번호입니다. 확인 후 다시 거래하십시오", "ERR");
+		return false;
+	}
+
+	if(isDupCdnoValue == "true") {
+		gfn_msgDialog("이미 처리된 카드접수번호입니다. 확인 후 다시 거래하십시오", "ERR");
+		return false;
+	}
+
+
+	return true;
+}
+
+//validation 공통화 시키면 필수 항목 체크하는 부분 제거할 것.
+function validation(responseName, objId) {
+
+	responseId = objId;
+    var acct = tabWorkDetail.tabBaseInfo.meAcno.Value;
+            
+    //중복처리 체크를 위해 추가
+    if (stepId == "003" && GV_BRANCHKIND != "3") {
+        gfn_msgDialog("이미처리되었습니다. 재조회 후 다음 업무를 처리하세요.", "ERR");
+        return;
+    }
+
+    if (connMenuChk != "DP141" && connMenuChk != "DP140" && connMenuChk != "AdminQuality") { //고객정보등록검수가 아닐경우에만 체크
+        if (responseName == "취소") { 
+             if(preStep == "004") {
+                //계좌번호 또는 서브계좌일련번호 변경 시 변경 전 값과 비교
+                afterSubAcct = tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Value;
+                afterAcct = tabWorkDetail.tabBaseInfo.meAcno.Value;
+                
+                if((trim(preAcct) != trim(afterAcct)) || (trim(preSubAcct) != trim(afterSubAcct))) {
+                    gfn_msgDialog("계좌번호 또는 서브계좌 일련번호가 변경되어 취소 처리 할 수 없습니다.","ERR");
+    
+                    dsDetail.setColumn(0, "계좌번호", preAcct);
+                    dsDetail.SetColumn(0, "분할일련번호" , preSubAcct);
+                        
+                    return false;
+                } else {
+                    if(!Confirm("취소하시겠습니까?")) return;      
+                }
+            } else {
+                if(!Confirm("취소하시겠습니까?")) return;      
+            } 
+        }
+        
+        //뱅킹간의 고객정보 변경여부의 일치 / 불일치 체크(eai연계)
+        if (stepId == "003" && responseName == "완료") { 
+            var eaiCnoStr = tabWorkDetail.tabBaseInfo.meCno.Value;
+            var eaiPabunoStr = tabWorkDetail.tabBaseInfo.mePabuno.Value;
+
+            //	고객번호에 값이 없으면 주민사업자번호를 고객번호로 변경한다.
+            //	고객번호는 법인과 개인별로 재구성한다.
+            if	(eaiCnoStr == "") {
+                if	(Length(eaiPabunoStr) > 0 && Length(eaiPabunoStr) < 12 )	
+                    eaiCnoStr	= "999" + eaiPabunoStr;
+                else												
+                    eaiCnoStr	= eaiPabunoStr;
+            }
+            
+            if (eaiCnoStr != "") {
+                //고객번호, 기준일, 부점코드
+                dsEaiSend.ClearData();
+                dsEaiSend.AddRow();
+                dsEaiSend.SetColumn(0, "고객번호", eaiCnoStr);
+                dsEaiSend.SetColumn(0, "기준일", Today());
+                dsEaiSend.SetColumn(0, "부점코드", GV_BRANCHCODE);
+                
+                http.Sync = true;
+                gfn_getEaiData(CONSTANT_EAIKIND_CHECKCUSTOMER, "dsEaiSend", "dsEaiRecv");
+                http.Sync = false;
+                trace(" eai : 고객정보변경여부값:" + chkCnoInfoChng.Value);
+                trace("eaiReturnValue:" + eaiReturnValue);
+                var showMsg = "";
+                //	EAI 연동 실패
+                if (eaiReturnValue == "E") {
+                    showMsg	= "EAI연동 실패입니다.\n재 확인 하시겠습니까?";
+                    eaiReturnValue	= "";
+                } else if (eaiReturnValue == "X") { //	고객정보가 존재하지 않는경우
+                    showMsg	= "해당 고객의 정보가 존재하지 않습니다.\n재 확인 하시겠습니까?";
+                } else if (chkCnoInfoChng.Value != eaiReturnValue) {
+                    //	G2G 고객정보변경 여부값과 뱅킹의 고객정보변경 여부값이 틀린경우 사용자에게
+                    //	확인요청 후 업무를 흘러가게 할지, 업무흐름을 중단할지를 선택하도록 하여 처리한다.
+                    showMsg	= "뱅킹시스템과 G2G시스템의 변경기록이 불일치 합니다.\n재 확인 하시겠습니까?";
+                }
+            
+                if (Length(showMsg) > 0 )	{
+                    if (Confirm(showMsg)) { 
+                        return;
+                    }
+                }
+            }
+        }
+
+        if((stepId == "001" || stepId == "002" || stepId == "999") && (responseName == "완료" || responseName == "저장") ) {
+            if ((preStep == "004" && responseName == "저장") || (stepId == "999" && responseName == "저장")) {
+                
+                if(acct != "") {
+                
+                    if(isDupAcnoValue == "true" || isDupCdnoValue == "true")
+                    {
+                        chkAcct = "Y";
+                        var sub1 = "중복처리된 계좌가 존재합니다 " 
+                                 + "계좌변경시 변경전 계좌가 미처리 명세에 "
+                                 + "익일 12시 이전까지 남아있을 수 있습니다 "
+                                 + "그래도 변경하시겠습니까? ";
+                        ret = gfn_msgDialog(sub1,"CNF");
+                        if(ret) {
+                            
+                        } else {
+                            return;
+                        }
+                    } else {
+                        chkAcct = "N";
+                        var sub2 = "계좌변경시 변경전 계좌가 미처리 명세에 "
+                                 + "익일 12시 이전까지 남아있을 수 있습니다 "
+                                 + "그래도 변경하시겠습니까? ";
+                        ret = gfn_msgDialog(sub2,"CNF");
+                        if(ret) {
+                            
+                        } else {
+                            return;
+                        }
+                    }
+                   
+                }   
+            }  else {
+                if(preStep = "004" && responseName == "완료" && stepId == "002") {
+                
+                } else {
+                    if(!beforeValidation(responseName))
+                        return;
+                }
+            }
+        }
+        var msg = "";
+    
+        // 확인 필요
+        // 계좌번호 체크시,카드제외, step:002이고 저장이 아닐때만 체크
+        //고객정보등록검수, 품질관리 에서 넘어올때는 stepId 안넘어오므로 체크하는 부분 점검 필요
+        if ((responseName == "완료" && stepId == "001") || (responseName == "완료" && stepId == "002") || (responseName == "저장" && stepId == "002") || (responseName == "저장" && stepId == "999")) { // 확인 필요
+            trace("[lee:debug:] tabWorkDetail.tabBaseInfo.rdoTrKind.Value = " + tabWorkDetail.tabBaseInfo.rdoTrKind.Value);
+            trace("[lee:debug:] responseName = " + responseName);
+            if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value != "2" && responseName != "취소") {
+                if(acct !="" ) { trace("[lee:debug:acct] " + acct);
+                    var rspCode = IsValidAccount(acct);
+    
+                    switch(rspCode) {
+                        case 0 : msg = "올바른 계좌번호입니다."; break;
+                        case 1 : msg = "계좌번호 오류입니다. 확인후 다시 입력하세요."; break;
+                        case 2 : msg = "입.출금이 되지않는 계좌번호입니다. 확인후 다시 입력하세요."; break;
+                        default  : msg = "기타 에러가 발생하였습니다. 관리자에게 문의하세요.";
+                    }
+                    //alert("rspCode:" + rspCode + ":, MSG:" + msg);     
+                    if(rspCode != 0) {
+                        gfn_msgDialog(msg, "ERR");
+                        tabWorkDetail.tabBaseInfo.meAcno.SetFocus();
+                        return;
+                    }
+                }
+            }
+        }
+    
+        if (responseName == "완료" || responseName == "저장") {
+            if (subacnoCheck()) {
+                    return;
+            }
+        }
+        
+    
+        if (responseName != "취소"){ 
+            if (connMenuChk != "AdminQuality") { 
+               if (responseName != "저장" && responseName != "반송" && !(stepId == "004" && responseName == "완료")) {
+                //if (responseName != "취소" && responseName != "반송") {
+                    if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "") {
+                        gfn_msgDialog("거래종류를 선택하셔야합니다.", "ERR");
+                        return;
+                    }
+    
+                    if (tabWorkDetail.tabBaseInfo.mePabuno.Value == "") {
+                            gfn_msgDialog("주민사업자번호를 입력하세요.", "ERR");
+                            tabWorkDetail.tabBaseInfo.mePabuno.SetFocus();
+                            return;
+                    }
+    
+                    if (tabWorkDetail.tabBaseInfo.edtCnm.Text == "") {
+                            gfn_msgDialog("고객명을 입력하세요.", "ERR");
+                            tabWorkDetail.tabBaseInfo.edtCnm.SetFocus();
+                            return;
+                    }
+
+                    if (Length(trim(tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value)) == 0) {
+                        gfn_msgDialog("개인법인구분을 입력하세요.", "ERR");
+                        tabWorkDetail.tabBaseInfo.rdoIndvCorpType.SetFocus();
+                        return;
+                    }
+                    
+                    if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "2"  || tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "3"  ) {
+                        if (Length(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value) == 0 || tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "") {
+                            gfn_msgDialog("영업점 카드발급 등록을 선택하세요.", "ERR");
+                            return;
+                        }
+                        
+                        if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "Y" && tabWorkDetail.tabBaseInfo.meCdNo.value == "") {
+                            gfn_msgDialog("신용(체크)카드번호를 입력하세요.", "ERR");
+                            tabWorkDetail.tabBaseInfo.meCdNo.SetFocus();
+                            return;
+                        }
+                        else if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "N" && tabWorkDetail.tabBaseInfo.edtRecpNo.Text == "") {
+                            gfn_msgDialog("신용카드접수번호를 입력하세요.", "ERR");
+                            tabWorkDetail.tabBaseInfo.edtRecpNo.SetFocus();
+                            return;
+                        }
+                
+                        if (responseName == "완료") {
+                            var chkstr = "";
+                            for(var i= 0; i < dsImage.GetCount(); i++) {
+                                if (dsImage.GetColumn(i, "문서양식코드") == "CO-B-FM-112" 
+                                 || dsImage.GetColumn(i, "문서양식코드") == "CO-B-FM-133"
+                                 || dsImage.GetColumn(i, "문서양식코드") == "CO-I-FM-019") { // 개인신용정보동의서 양식 추가
+                                    chkstr = "Y";
+                                    break;
+                                }
+                            }
+                            if(chkstr != "Y") {
+                                gfn_msgDialog("개인신용정보의 제공/활용동의서를 추가스캔하셔야 합니다.", "ERR");
+                                return;
+                            }
+    
+                        }
+                    }
+        
+                   //if (responseName != "저장"){
+                    if (responseName != "반송" || responseName != "취소"){
+                        if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "1"  || tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "3"  ) {
+                            if (tabWorkDetail.tabBaseInfo.meAcno.Value == "") {
+                                gfn_msgDialog("계좌번호를 입력하세요.", "ERR");
+                                tabWorkDetail.tabBaseInfo.meAcno.SetFocus();
+                                return;
+                            }		
+                        }
+                    }
+                    
+                    if (tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "Y") { //영업점카드발급등록 YES 일때
+                        if (tabWorkDetail.tabBaseInfo.meCdNo.Value == "") {
+                            gfn_msgDialog("신용(체크)카드번호를 입력하셔야 합니다.", "ERR");
+                            tabWorkDetail.tabBaseInfo.meCdNo.SetFocus();
+                            return;
+                        }
+                    }
+                }
+                if (tabWorkDetail.tabBaseInfo.meCno.Value == "") {
+                    gfn_msgDialog("고객번호를 입력하세요.", "ERR");
+                    tabWorkDetail.tabBaseInfo.meCno.SetFocus();
+                    return;
+                }
+
+
+    
+                if (Length(trim(tabWorkDetail.tabBaseInfo.meCtype.Value)) == 0) {
+                    gfn_msgDialog("고객구분을 입력하세요.", "ERR");
+                    tabWorkDetail.tabBaseInfo.meCtype.SetFocus();
+                    return;
+                }	
+                
+                /*
+                if (!gfn_checkCompUtype(tabWorkDetail.tabBaseInfo)) {
+                return;
+                }
+                */
+                
+            }
+        }
+    }
+
+//    if (gfn_checkCompUtype(tabWorkDetail.tabBaseInfo, false)) {
+        setDetail(responseName);
+        setDI();
+        setProcess(responseName);
+        setBankReg();
+        setDataField(responseName);
+        
+		/*  dsDataField.GetColumn(0,"iwfSignCnt");
+			jw  Dispatch전 EAI 연동
+		*/  
+		if ( didEAI != "Y" ) {
+			if ( responseName == "완료" ) {
+				if ( ( stepId == "002" && dsDataField.GetColumn(0,"iwfSignCnt") == "1" ) ||
+				       stepId == "003" ) {
+					if ( dsDetail.GetColumn(0, "처리여부") == "N" ) {
+						befEAIConn(responseName, objId);         // EAI 연결
+						return;
+					}
+				}
+			}
+		}		
+        process(responseName, objId);  
+        
+//    }
+}
+// jw.
+// dispatch 전 이미지정보를 EAI로 전송한다.  
+// dispatch 시 didEAI 는 'N', EAI 정상거래시 callback 에서 'Y' 로 변경 되고 process를 호출.
+function befEAIConn(responseName, objId) {
+    var processType = dsDetail.GetColumn(0, "처리유형");
+    var arg = "processType=" + quote(processType);
+	gfn_transaction("carryToSimsDp", "ng2g::/cd/cd0005.cd?targetTo=carryToSimsDp",   //goTo -> targetTo 로
+					"dsProcess=dsProcess:a dsDetail=dsDetail:a dsEaiSend=dsEaiSend_0:a dsEaiRecv=dsEaiRecv_0:a dsEaiBaseList=dsEaiBaseList:a dsEaiItemList=dsEaiItemList:a", "dsProcess=dsProcess dsEaiRecv_0=dsEaiRecv",
+					arg, "callback" , objId);
+	gfn_msgDialog(waitMsgToSims, "INF");					
+ } 
+//상세 데이타셋 셋팅
+function setDetail(responseName) {
+    var processType = "dispatch";
+    dsDetail.SetColumnNF(0, "부점구분", GV_BRANCHKIND);
+    dsDetail.SetColumnNF(0, "G2G업무유형구분", CONSTANT_WORKTYPE_DP);
+    dsDetail.SetColumnNF(0, "취급자직번", dsDetail.GetColumn(0, "취급자직번")); //생성자직번
+    dsDetail.SetColumnNF(0, "최종변경자명", GV_USERNAME); //로그인사용자명
+    dsDetail.SetColumnNF(0, "부점코드", GV_BRANCHCODE);
+    dsDetail.SetColumnNF(0, "은행코드", GV_BANKCODE);
+    dsDetail.SetColumnNF(0, "이미지키", imageKey);
+    //dsDetail.SetColumnNF(0, "워크플로우상태코드", ""); //사용안함
+    //dsDetail.SetColumnNF(0, "최종변경작업코드", ""); //사용안함
+    if (responseName == "저장") 
+        processType = "save";
+	
+    dsDetail.SetColumnNF(0, "최종변경자직번", GV_USERID); 
+    dsDetail.SetColumnNF(0, "처리유형", processType); //dispatch,launch,save
+    dsDetail.SetColumnNF(0, "삭제여부", "N"); 
+
+//    dsDetail.SetColumnNF(0, "고객정보확인여부", "");        
+//    dsDetail.SetColumnNF(0, "항목별점검결과내용", "");       
+    dsDetail.SetColumnNF(0, "고객정보변경여부", chkCnoInfoChng.Value );
+    dsDetail.SetColumnNF(0, "아이템수정여부", chkItemUpdt.Value );
+    dsDetail.SetColumnNF(0, "고객변경이력확인여부", eaiReturnValue); //eai 연계 결과값
+    //dsDetail.SetColumnNF(0, "계정과목코드", ""); //사용하지 않는것 같음
+    //dsDetail.SetColumnNF(0, "자동이체신청코드", ""); //추가필요
+    //dsDetail.SetColumnNF(0, "자동납부신청코드", ""); //추가필요
+    //dsDetail.SetColumnNF(0, "자택전화번호", ""); //추가필요
+    dsDetail.SetColumnNF(0, "반송사유코드", tabWorkDetail.tabMsg.cboRsndRsn.Value ); 
+    dsDetail.SetColumnNF(0, "기타변경내용", itemBackUp); //아이템 변경전 정보
+    if (Length(trim(dsDetail.GetColumn(0, "연동거래여부"))) == 0 )
+        dsDetail.SetColumn(0, "연동거래여부", "N");
+
+    var sealRegYn = "N"; //인감테이블 등록여부
+
+    //품질관리이고, 카드 인경우는 인감 update 안함.
+    if (connMenuChk != "AdminQuality" && connMenuChk != "DP140" && tabWorkDetail.tabBaseInfo.rdoTrKind.Value != "2") {
+        sealRegYn = "Y";
+    }
+
+    dsDetail.SetColumnNF(0, "인감등록여부", sealRegYn); //인감테이블 등록여부
+    dsDetail.SetColumnNF(0, "connMenuChk", connMenuChk);
+    
+    trace(dsDetail.SaveXML());
+}
+
+//dsDI 물류 데이타셋 셋팅
+function setDI() {
+	dsDI.ClearData();
+	dsDI.AddRow();
+	dsDI.SetColumn(0, "G2G업무유형구분", CONSTANT_WORKTYPE_DP);
+}
+
+
+//dsBankReg 계좌번호변경 데이타셋 셋팅
+function setBankReg() {
+	dsBankReg.ClearData();
+	dsBankReg.AddRow();
+	dsBankReg.SetColumnNF(0,"G2G업무유형구분", CONSTANT_WORKTYPE_DP);
+	dsBankReg.SetColumnNF(0,"워크플로우ID", workfloId);
+    dsBankReg.SetColumnNF(0,"이미지키", imageKey);
+    dsBankReg.SetColumnNF(0,"워크플로우스텝구분", stepId);
+    dsBankReg.SetColumnNF(0,"이전워크플로우스텝구분", preStep);
+    dsBankReg.SetColumnNF(0,"변경전계좌", preAcct);
+    dsBankReg.SetColumnNF(0,"변경전일련", preSubAcct);
+    dsBankReg.SetColumnNF(0,"변경후계좌", tabWorkDetail.tabBaseInfo.meAcno.Value);
+    dsBankReg.SetColumnNF(0,"변경후일련", tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Value);
+    dsBankReg.SetColumnNF(0,"계좌중복여부", chkAcct);
+}
+
+//dsProcess 데이타셋 셋팅
+function setProcess(responseName) {
+    
+	dsProcess.ClearData();
+	dsProcess.AddRow();
+	dsProcess.SetColumnNF(0,"G2G업무유형구분", CONSTANT_WORKTYPE_DP);
+	dsProcess.SetColumnNF(0,"워크플로우ID", workfloId);
+	dsProcess.SetColumnNF(0,"이미지키", imageKey);
+    if (connMenuChk == "DP140") { //고객정보등록검수
+        dsProcess.SetColumnNF(0,"워크플로우맵구분", "14");
+        dsProcess.SetColumnNF(0,"워크플로우스텝구분", "002");
+    } else {
+        dsProcess.SetColumnNF(0,"워크플로우맵구분", mapId);
+        dsProcess.SetColumnNF(0,"워크플로우스텝구분", stepId);
+    }
+	
+	dsProcess.SetColumnNF(0,"취급자직번", GV_USERID); //로그인 사용자직번
+	dsProcess.SetColumnNF(0,"은행코드", GV_BANKCODE);
+	dsProcess.SetColumnNF(0,"부점코드", GV_BRANCHCODE);
+	dsProcess.SetColumnNF(0,"queueName", "");
+    dsProcess.SetColumnNF(0, "응답명", responseName); //완료,취소,저장
+
+    if (stepId == "003" && responseName == "반송") {	// 센터 현장대리인을 지정한다.
+        dsProcess.SetColumnNF(0,"다음사용자직번", GV_DECIDERID);
+    }
+
+    if (stepId == "002" && preStep != "004" && responseName == "저장") {
+        //var his1 = "신규저장 : "+tabWorkDetail.tabBaseInfo.meAcno.Value
+        //         + tabWorkDetail.tabMsg.txtAfDlvrCntn.Text;
+        dsProcess.SetColumnNF(0,"전달사항", tabWorkDetail.tabMsg.txtAfDlvrCntn.Text);
+    } else if (stepId == "002" && preStep == "004" && responseName == "저장") {
+        var his2 = "변경전계좌 : "+preAcct+" 변경전일련번호 : "+preSubAcct+"\n"
+                 +" , 변경후계좌 : "+tabWorkDetail.tabBaseInfo.meAcno.Value+" 변경후일련번호 : "+tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Value+"\n"
+                 +"  " + tabWorkDetail.tabMsg.txtAfDlvrCntn.Text;
+        dsProcess.SetColumnNF(0,"전달사항", his2);
+    } else if (stepId == "999" && responseName == "저장") {
+        var his3 = "변경전계좌 : "+preAcct+" 변경전일련번호 : "+preSubAcct+"\n"
+                 +" , 변경후계좌 : "+tabWorkDetail.tabBaseInfo.meAcno.Value+" 변경후일련번호 : "+tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Value+"\n"
+                 +"  " + itemBackUp;
+        dsProcess.SetColumnNF(0,"전달사항", his3);
+    } else {
+        dsProcess.SetColumnNF(0,"전달사항", tabWorkDetail.tabMsg.txtAfDlvrCntn.Text );
+    }
+    
+    trace(dsProcess.SaveXML());
+}
+
+/*
+//로즈메일 전송
+function doRoseMailSend(responseName) { 
+    if (stepId == "004" && responseName == "완료") {
+        var workType = CONSTANT_WORKTYPE_DP;        //(필수) G2G업무유형구분
+        var sendUserId = GV_USERID;  //(필수) 송신취급자직번
+        var recvUserId = dsDetail.GetColumn(0, "취급자직번");   //(필수) 수신취급자직번
+        var subject = "(G2G-수신) 예금거래신규 반송건이 있습니다. G2G에서 확인하세요.";                                  //(필수) 제목
+        var content = "G2G에서 확인하세요";    //(필수) 내용
+        var returnYn = "N";         //반송여부
+        var emrgYn = "N";           //긴급여부
+        var mapId = mapId;           //워크플로우맵구분
+        var stepId = stepId;         //워크플로우스텝구분
+        var imageKey = imageKey;      //이미지키
+        
+        gfn_sendRoseMsg(workType, sendUserId, recvUserId, subject, content,
+                            mapId, stepId, returnYn, emrgYn, imageKey);
+    }
+}
+*/
+
+//데이타필드 set
+function setDataField(responseName) { 
+	dsDataField.ClearData();
+	dsDataField.AddRow();
+    dsDataField.SetColumnNF(0,"swfLastUpdtmnID", GV_USERID);
+    //dsDataField.SetColumnNF(0,"swfLastUpdtWorkCd", "0401002999");
+    
+    if (connMenuChk == "DP140") {
+        dsDataField.SetColumnNF(0,"swfKindCd", "01");
+    } else {
+		if(stepId == "001" && responseName == "완료") {
+			dsDataField.SetColumnNF(0,"swfImageKey", imageKey);
+			dsDataField.SetColumnNF(0,"swfWorkType", "04");
+			dsDataField.SetColumnNF(0,"swfMapID", mapId);
+			//dsDataField.SetColumnNF(0,"swfStepID", "003");
+			dsDataField.SetColumnNF(0,"swfGroupName", "B1");
+			dsDataField.SetColumnNF(0, "swfBranchCode", GV_BRANCHCODE);
+			dsDataField.SetColumnNF(0, "swfMngBkcd", GV_BANKCODE);
+			dsDataField.SetColumnNF(0, "swfMngBrcd", GV_BRANCHCODE);
+			dsDataField.SetColumnNF(0, "B1", GV_USERID);
+		}
+        dsDataField.SetColumnNF(0,"swfPabuno", tabWorkDetail.tabBaseInfo.mePabuno.Value);
+        dsDataField.SetColumnNF(0,"swfCnm", tabWorkDetail.tabBaseInfo.edtCnm.Text);
+        dsDataField.SetColumnNF(0,"swfIndvCorpType", tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value);
+        dsDataField.SetColumnNF(0,"swfAcno", tabWorkDetail.tabBaseInfo.meAcno.Value);
+        dsDataField.SetColumnNF(0,"swfActitc", dsDetail.GetColumn(0, "계정과목코드")); //계정과목코드
+        dsDataField.SetColumnNF(0,"swfCno", tabWorkDetail.tabBaseInfo.meCno.value);
+
+        var iwfSignCnt = 0;
+        if (mapId == "92") { //외화예금거래신규
+            dsDataField.SetColumnNF(0,"iwfSignCnt", "0");
+            dsDataField.SetColumnNF(0,"iwfStepCnt", "1");
+        } else {
+            if (responseName == "완료" && tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "2") 
+                iwfSignCnt = "1";
+            dsDataField.SetColumnNF(0,"iwfSignCnt", iwfSignCnt);
+            dsDataField.SetColumnNF(0,"iwfStepCnt", tabWorkDetail.tabBaseInfo.rdoTrKind.Value);
+        }   
+        dsDataField.SetColumnNF(0,"swfCdno", tabWorkDetail.tabBaseInfo.meCdNo.Value);
+        
+        if (stepId == "004" && responseName = "완료")
+			dsDataField.SetColumnNF(0,"swfRejectYn", "Y");
+		else
+			dsDataField.SetColumnNF(0,"swfRejectYn", "N");
+    }
+    
+    trace(dsDataField.SaveXML());
+}
+
+function IsValidAccount(acct) {
+	var acctLen = acct.length;
+	if(acctLen == 13) 
+		return 0;
+
+	if(acctLen != 12 && acctLen != 11 )
+		return 1;
+	var isNumber = false;
+	if(acctLen == 12) {
+		var c = acct.charAt(3);
+		for(var i=0; i<10; i++) {
+			if(c == i)
+				isNumber = true;
+		}
+		if(!isNumber)
+			return 0;
+	}
+
+	var isOldAcct = (acctLen == 11);
+	var modulus =11;
+	var lastDigit = acct.charAt(acctLen-1);
+    var weight;
+    if (isOldAcct) {
+        weight = "5432765432";
+    } else {
+        weight = "76543276543";
+    }
+	var sum = 0;
+	for(var i=0; i<(acctLen-1); i++)
+		sum += ParseInt(acct.charAt(i)) * ParseInt(weight.charAt(i)); //
+
+	var remainder = sum % modulus;
+	if( isOldAcct && remainder==0)//구계좌의 값이맞을 경우 1반환
+		return 1;
+	var checkDigit = modulus - remainder;
+    if (checkDigit >= 10) {
+        checkDigit = checkDigit -10;
+    } else {
+        checkDigit = checkDigit;
+    }
+	
+	if(checkDigit != lastDigit)
+		return 1;
+	return 0;
+}
+
+function typeCheck(tCheck) {
+	var tchk = "";
+
+    if ( typeMemory != tCheck) 
+        msgYN = "Y";
+	if (msgYN == "Y"){
+		if (!Confirm("ITEM정보 항목의 일부(계좌번호, 카드접수번호, 신용(체크)카드번호)내용이 삭제될 수 있습니다. 삭제하시겠습니까?")) {
+            tabWorkDetail.tabBaseInfo.rdoTrKind.Value = typeMemory;
+			return;
+		} else {
+			typeMemory = tCheck;
+		}
+    }
+
+	if(tCheck == "1") { //예금
+		docToggle(1);
+	}else if (tCheck == "2") { //카드
+		docToggle(2);
+	}else if (tCheck == "3") { //예금 & 카드
+		docToggle(3);
+	}
+}
+
+function docToggle(ch){
+	if (ch == "1") { 
+		if(stepId !="004")
+            setProperty( "chkSealUseYn^rdoIndvCorpType^chkFirIamtAcno", "Enable", true); 
+		
+        if(stepId == "003") 
+            setProperty( "chkSealUseYn^chkFirIamtAcno", "Enable", false);
+
+		setProperty( "meAcno^meCno^meCtype", "Enable", true);
+
+        tabWorkDetail.tabBaseInfo.edtRecpNo.Text = "";
+        tabWorkDetail.tabBaseInfo.meCdNo.Value = "";
+        setProperty( "edtRecpNo^meCdNo", "ReadOnly", true);
+        tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value = ""; //확인필요
+        setProperty( "rdoCardIsueReg", "Enable", false);
+	} else if (ch == "2"){
+        setProperty( "edtRecpNo^meCdNo", "ReadOnly", true);
+        setProperty( "rdoCardIsueReg", "Enable", true);
+        setProperty( "chkSealUseYn^meAcno", "Enable", false);
+        tabWorkDetail.tabBaseInfo.chkSealUseYn.Value = "N"; //확인필요(checked false)
+        tabWorkDetail.tabBaseInfo.meAcno.Value = "";
+        tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value = "1";   //확인필요  개인(1), 법인(2)
+        setProperty( "rdoIndvCorpType", "Enable", false);
+        setProperty( "chkFirIamtAcno", "Enable", false);
+
+		if (tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "Y") { //영업점카드발급등록 YES(Y)
+            tabWorkDetail.tabBaseInfo.edtRecpNo.Text = "";
+            setProperty( "edtRecpNo", "ReadOnly", true);
+            setProperty( "meCdNo", "ReadOnly", false);
+		} else if (tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "N") {//영업점카드발급등록 NO(N)
+            tabWorkDetail.tabBaseInfo.meCdNo.Value = "";
+            setProperty( "meCdNo", "ReadOnly", true);
+            setProperty( "edtRecpNo", "ReadOnly", false);
+		}	
+
+		if (stepId == "003") {
+            setProperty( "rdoCardIsueReg", "Enable", false);
+			if (tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value != "")  //확인필요 (영업점카드발급등록이 선택되있으면)
+                setProperty( "rdoIndvCorpType", "Enable", false);
+
+            setProperty( "edtRecpNo^meCdNo", "ReadOnly", true);
+		}
+	} else if (ch == "3") {
+		if(stepId !="004")
+            setProperty( "chkSealUseYn^rdoIndvCorpType^chkFirIamtAcno", "Enable", true);
+
+		if(stepId == "003") 
+            setProperty( "chkSealUseYn^chkFirIamtAcno", "Enable", false);
+
+        setProperty( "edtRecpNo^meCdNo", "ReadOnly", true);
+        setProperty( "rdoCardIsueReg^meAcno^meCno^meCtype", "Enable", true);
+        tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value = "1";   //확인필요  개인(1), 법인(2)
+        setProperty( "rdoIndvCorpType", "Enable", false);
+		if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "Y") {
+            tabWorkDetail.tabBaseInfo.edtRecpNo.Text = "";
+            setProperty( "edtRecpNo", "ReadOnly", true);
+            setProperty( "meCdNo", "ReadOnly", false);
+		}else if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "N") {
+            tabWorkDetail.tabBaseInfo.meCdNo.Value = "";
+            setProperty( "meCdNo", "ReadOnly", true);
+            setProperty( "edtRecpNo", "ReadOnly", false);
+		}	
+		if(stepId == "003" || stepId == "004") {
+            setProperty( "rdoCardIsueReg", "Enable", false);
+			if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value != "")  //확인필요
+                setProperty( "rdoIndvCorpType", "Enable", false);
+            setProperty( "edtRecpNo^meCdNo", "ReadOnly", true);
+		}		
+	}
+
+}
+
+/* 
+    739 계좌 유뮤에 따라 서브계좌일련번호 의   disabled을 true ,false 시키는 method
+    계좌번호가 입력되지 않으면 서브계좌일련번호 입력란을 disable 시킨다.
+*/
+function manyAcnoChk(obj){ //확인필요
+	var	isManyAcno	= false;
+	
+	isManyAcno	= checkManyAcno( obj, "739" );
+	if	( !isManyAcno )	isManyAcno	= checkManyAcno( obj, "809" );
+    if	( !isManyAcno )	isManyAcno	= checkManyAcno( obj, "747" );
+	if	( isManyAcno )	{
+		//setProperty("edtSubAcnoSeq", "Enable", true);
+        setProperty("edtSubAcnoSeq", "ReadOnly", false);
+	}
+	else	{
+		setProperty("edtSubAcnoSeq", "ReadOnly", true);
+        tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Text = "";
+	}
+	return	isManyAcno;
+}
+
+//	다계좌인지 체크한다.
+function checkManyAcno( obj, manyAcno ){
+	var idx = manyAcno.length;
+	
+	if	( obj.value.length <= 0 )	return false;
+	
+	if	( obj.value.length < idx )	idx	= obj.value.length;
+	for	( var i=0; i<idx; i++ )	{
+		if	( obj.value.SubStr(0,i+1) != manyAcno.SubStr(0,i+1) )	return false;
+	}
+	return	true;
+}
+
+//개인/법인 구분 선택시 체크하는 함수
+function indvCheck() {
+	if (tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value == "2") { //법인(2)
+        tabWorkDetail.tabBaseInfo.edtRecpNo.Text = "";
+        setProperty( "edtRecpNo^meCdNo", "ReadOnly", true);
+        tabWorkDetail.tabBaseInfo.meCdNo.Value = "";
+        tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value = "";
+        setProperty( "rdoCardIsueReg", "Enable", false);
+	} else if (tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value == "1") { //개인(1)
+		if (tabWorkDetail.tabBaseInfo.rdoTrKind.Value != "1"){ // 예금이아닌경우  -- 확인필요
+            tabWorkDetail.tabBaseInfo.edtRecpNo.Text = "";
+            setProperty( "edtRecpNo^meCdNo", "ReadOnly", false);
+            tabWorkDetail.tabBaseInfo.meCdNo.Value = "";
+            setProperty( "rdoCardIsueReg", "Enable", true);
+		}
+	}
+}
+
+//서브계좌 체크
+function subacnoCheck(){
+    var subAcnoChk = tabWorkDetail.tabBaseInfo.meAcno.Value.SubStr(0,3);
+	if (subAcnoChk == "739" || subAcnoChk == "809" || subAcnoChk == "747") {
+		if (tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Text != "" ) {
+			return false;
+		}
+		else {
+			gfn_msgDialog("1통장다펀드계좌는 서브계좌일련번호가 입력되어야합니다.", "ERR");		
+			return true;
+		}
+	}
+	else{
+		if(tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Text != "") {
+			gfn_msgDialog("1통장다펀드계좌가 아닌 경우 일련번호를 입력하실수 없습니다", "ERR");
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+}
+
+
+//영업점 카드발급등록 선택시 체크하는 함수
+function brcdCardCheck() {
+    //카드 나 예금& 카드 일때
+	if(tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "2" || tabWorkDetail.tabBaseInfo.rdoTrKind.Value == "3") {
+		if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "Y") {
+            tabWorkDetail.tabBaseInfo.edtRecpNo.Text = "";
+            setProperty( "edtRecpNo", "ReadOnly", true);
+            setProperty( "meCdNo", "ReadOnly", false);
+		}else if(tabWorkDetail.tabBaseInfo.rdoCardIsueReg.Value == "N") {
+            tabWorkDetail.tabBaseInfo.meCdNo.Value = "";
+            setProperty( "meCdNo", "ReadOnly", true);
+            setProperty( "edtRecpNo", "ReadOnly", false);
+		}
+	}
+}
+
+// 주민사업자번호 입력시 항목 변경
+function customCheck(){
+	var va = tabWorkDetail.tabBaseInfo.mePabuno.Value;
+	var len = va.length;
+	if(len == 13) { //개인
+        tabWorkDetail.tabBaseInfo.meCno.Value = va;
+        tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value = 1;
+	}
+	else if(len==10) {//법인
+        tabWorkDetail.tabBaseInfo.meCno.Value = "999" + va;
+        tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value = 2;
+	}
+}
+
+function tempTest() {
+    var InspRslt = dsDetail.GetColumn(0, "항목별점검결과내용");
+    //InspRslt = "010010010"; //임시
+    var len = Length(InspRslt);
+    if (InspRslt != "" && len == 9 ) { 
+        for ( var i = 0; i < len ; i++) {
+            if (CharAt(InspRslt,i) == "1") {
+                if (i == 0) {
+                    dsDetail.SetColumn(0, "자택전화등록오류여부", "Y");
+                } else if (i == 1) {
+                    dsDetail.SetColumn(0, "직장전화등록오류여부", "Y");
+                } else if (i == 2) {
+                    dsDetail.SetColumn(0, "휴대폰등록오류여부", "Y");
+                } else if (i == 3) {
+                    dsDetail.SetColumn(0, "자택주소등록오류여부", "Y");
+                } else if (i == 4) {
+                    dsDetail.SetColumn(0, "직장주소등록오류여부", "Y");
+                } else if (i == 5) {
+                    dsDetail.SetColumn(0, "이메일등록오류여부", "Y");
+                } else if (i == 6) {
+                    dsDetail.SetColumn(0, "DM발송등록오류여부", "Y");
+                } else if (i == 7) {
+                    dsDetail.SetColumn(0, "TM등록오류여부", "Y");
+                } else if (i == 8) {
+                    dsDetail.SetColumn(0, "기타등록오류여부", "Y");
+                } 
+            }
+        }
+    }
+}
+
+/* =======================================================
+    Dialog
+   ======================================================= */
+function legacyCall(nRow, legacyScrnId, legacyScrnNm) {
+    dsDetail.SetColumn(0, "인감이미지등록여부", dsDetail.GetColumn(0, "인감사용여부"));
+	var args = "";
+		args  = "nIndex="	 + quote(nRow);
+		args += " workType=" + quote(workType);
+		args += " mapId="	 + quote(mapId);
+		args += " stepId="	 + quote(stepId);
+		args += " legacyScrnId=" + quote(legacyScrnId);
+		args += " legacyScrnNm=" + quote(legacyScrnNm);
+		args += " legacyData=" 	 + "dsDetail"; //화면연동 시 송신내용이 담긴 데이터셋명을 전달
+    rtnValue = gfn_legacyDialog(args);
+}
+
+// 현황조회(이력)
+function viewHistory() {
+	var workType = CONSTANT_WORKTYPE_DP ;
+	var imagekey = dsDetail.GetColumn(0 , "이미지키");
+
+	gfn_historyDialog(workType, imagekey);
+}
+
+function processChek() {
+    //중복처리 제거를 위해 추가
+    if (stepId != (dsDetail.GetColumn(0, "워크플로우스텝구분"))) {
+        gfn_msgDialog("스텝정보가 상이합니다. 목록을 재조회한후 진행하세요.","ERR");
+        var strMessage = "";
+        UserNotify(CONSTANT_USERNOTIFY_CLOSE, strMessage);
+    }
+}
+
+/* =======================================================
+    Grid
+   ======================================================= */
+//이미지 목록 클릭 시 이미지조회
+function grdImage_OnCellClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+	var strvalue = "";
+    var strCode = dsImage.GetColumnNF(nRow, "이미지ID");
+        strCode += "^" + dsImage.GetColumnNF(nRow,"XTORM이미지ID");
+    var strDocCode = dsImage.GetColumnNF(nRow, "문서양식코드");
+   
+    //신분증 서식코드 체크    
+    if (strDocCode == "TDEP-030-01" || strDocCode == "EC-Z-PI-011" || strDocCode == "01-T-LN-530" || strDocCode == "TDEP-030-03" || strDocCode == "TDEP-030-04" || strDocCode == "02-T-NR-001" || strDocCode == "02-T-NR-005" || strDocCode == "SACD-010-01" || strDocCode == "TDEP-030-02" || strDocCode == "01-T-LN-220") {
+		strvalue = strCode + "/" + strDocCode;
+		UserNotify(CONSTANT_USERNOTIFY_IMAGE_WATERMARK, strvalue);	//워터마킹 함
+	//신청서인경우
+	//DP-A-FM-076	예금거래신청서	EC-C-FM-048	외화예금거래신청서(영문)	EC-C-FM-028	외화예금거래신청서(한글)	TDEP-560-04	(구)예금거래신청서(G2G 미등록 건)	DP-A-FM-120	예금거래/신용카드 발급 신청서	DP-A-FM-125	예금거래신청서(영문)	EC-C-FM-063	외화예금거래신청서	
+	} else if (strDocCode == "DP-A-FM-076" || strDocCode == "EC-C-FM-048" || strDocCode == "EC-C-FM-028" || strDocCode == "DP-A-FM-120" || strDocCode == "DP-A-FM-125" || strDocCode == "EC-C-FM-063") {
+		strvalue = strCode + "/" + strDocCode;
+		UserNotify(CONSTANT_USERNOTIFY_IMAGE_WATERMARK, strvalue);	//워터마킹 함
+    } else {
+        UserNotify(CONSTANT_USERNOTIFY_IMAGE, strCode);				//워터마킹하지 않음
+    }
+		
+}
+
+//연동목록 더블클릭 시 처리 
+function grdLegacy_OnCellDblClick(obj,nRow,nCell,nX,nY,nPivotIndex)
+{
+    // 연계 조건 체크
+    var legacyScrnId = dsLegacy.GetColumnNF(nRow, "화면ID");
+    var legacyScrnNm = dsLegacy.GetColumnNF(nRow, "화면명");
+    
+    if (dsDetail.GetColumn(0, "개인법인구분") != "1" && dsDetail.GetColumn(0, "개인법인구분") != "2") {
+        gfn_msgDialog("개인법인구분은 개인이나 법인이어야 합니다","ERR");
+        tabWorkDetail.tabBaseInfo.rdoIndvCorpType.SetFocus();
+        return;
+    }
+
+    //품질관리, 고객정보등록검수에서 연결 됐을경우
+    if (connMenuChk == "AdminQuality" || connMenuChk == "DP140") {
+        if (legacyScrnId == "26010100000" || legacyScrnId == "26010300000") {
+            if (dsDetail.GetColumn(0, "개인법인구분") == "2") { //법인
+                legacyScrnId = Replace(legacyScrnId,"2601010","2601030");
+                legacyScrnNm = "고객조회(법인)";
+                /*
+                if (length(trim(dsDetail.GetColumn(0, "주민사업자번호"))) != 10) {
+                    gfn_msgDialog("사업자번호는 10자리입니다. 개인법인구분을 확인해 주십시요","ERR");
+                    tabWorkDetail.tabBaseInfo.mePabuno.SetFocus();
+                    return;
+                } 
+                */
+            } else if (dsDetail.GetColumn(0, "개인법인구분") == "1") { //개인
+                if (length(trim(dsDetail.GetColumn(0, "주민사업자번호"))) == 0) {
+                    gfn_msgDialog("주민사업자번호가 입력되지 않았습니다.","ERR");
+                    tabWorkDetail.tabBaseInfo.mePabuno.SetFocus();
+                    return;
+                }
+            }
+        }
+    } else {
+        if (legacyScrnId == "26010100000" || legacyScrnId == "26010100100" || legacyScrnId == "26010100200" || legacyScrnId == "26010300000" || legacyScrnId == "26010300100" || legacyScrnId == "26010300200") {
+            if (dsDetail.GetColumn(0, "개인법인구분") == "2") { //법인
+                legacyScrnId = Replace(legacyScrnId,"2601010","2601030");
+                legacyScrnNm = "고객조회(법인)";
+                /*
+                if (length(trim(dsDetail.GetColumn(0, "주민사업자번호"))) != 10) {
+                    gfn_msgDialog("사업자번호는 10자리입니다. 개인법인구분을 확인해 주십시요","ERR");
+                    tabWorkDetail.tabBaseInfo.mePabuno.SetFocus();
+                    return;
+                } else {
+                    //tabWorkDetail.tabBaseInfo.mePabuno.Value = "999" + tabWorkDetail.tabBaseInfo.mePabuno.Value;
+                }
+                */
+            }
+            if (stepId != "003") { //확인필요
+                if (length(trim(dsDetail.GetColumn(0, "고객번호"))) > 1) {
+                    if (length(trim(dsDetail.GetColumn(0, "고객번호"))) == 13 && length(dsDetail.GetColumn(0, "고객구분")) == 1) {
+                        var strReturn = gfn_dialog(this, "dp01::DP0101_Popup.xml","nRow =" + nRow ,320,500,"CloseFlag=true",500,10);
+                        
+                        legacyCall(nRow, strReturn[0], strReturn[1]);
+                        return; //이부분 확인 필요
+                    } else {
+                        gfn_msgDialog("고객번호가 잘못되었습니다.\n 고객번호를 지우신후 고객조회 및 신규를 다시시도하여주십시오!","ERR");
+                        return;
+                    }
+                }
+                if (tabWorkDetail.tabBaseInfo.mePabuno.Value == "") {
+                    gfn_msgDialog("주민사업자번호가 입력되지 않았습니다","ERR");
+                    return;
+                }
+            }
+        }
+        /*  linkUseSealYN 의 용도 확인 할 것.
+        if(document.main_form.useSealYN.checked)
+            document.main_form.linkUseSealYN.value = 'Y';
+        else
+            document.main_form.linkUseSealYN.value = 'N';
+        return true;
+        */
+    }
+
+    legacyCall(nRow, legacyScrnId, legacyScrnNm);
+}
+
+/* =======================================================
+    callback
+   ======================================================= */
+
+//Transaction 완료 후 처리
+function callback(svcid, errCode, errMsg) 
+{	
+    if (errCode != 0 ) {
+        alert(svcid + " 실패:" + errMsg);
+    } else {
+        if (svcid == "getDetail") {            
+            
+            gfn_setWinTitle(dsDetail.GetColumn(0, "워크플로우맵구분명"));
+            lblTitle.Text = dsDetail.GetColumn(0, "워크플로우스텝구분명");
+            oriPabuno = dsDetail.GetColumn(0, "주민사업자번호");
+            typeMemory = dsDetail.GetColumn(0, "내부거래구분");
+            connStepID = dsDetail.GetColumn(0, "검수워크플로우스텝구분");
+            preAcct = dsDetail.GetColumn(0, "계좌번호");
+			preSubAcct = dsDetail.GetColumn(0, "분할일련번호");
+			searchFlag = dsDetail.GetColumn(0, "조회구분");			
+			
+			processChek();
+			
+			if ( length(gfn_nvl(tabWorkDetail.tabBaseInfo.mePabuno.Value,"")) == 10  ) {
+				getDupInfo();
+				customCheck();
+			}
+			
+            if (mapId == "92") { //외화예금
+                gfn_setProperty("rdoTrKind", "Enable", false);
+                tabWorkDetail.tabBaseInfo.rdoTrKind.Value = "1";
+                typeCheck(tabWorkDetail.tabBaseInfo.rdoTrKind.Value);
+            }
+            //항목별점검결과내용 이관 후에는 제거 할 것.
+            //tempTest();
+            cenCondChange(GV_BRANCHCODE);
+            if (Length(trim(dsDetail.GetColumn(0, "개인법인구분"))) == 0 )
+                dsDetail.SetColumn(0, "개인법인구분", "1");
+            // 투자상품거래신청서인 경우 기본값을 개인으로 설정
+            for(var i= 0; i < dsImage.GetCount(); i++) {
+                if (dsImage.GetColumn(i, "맵문서양식명") == "투자상품거래신청서") {
+                    tabWorkDetail.tabBaseInfo.rdoIndvCorpType.Value = "1";
+                }
+            }
+
+			// Tablet Branch 건 인지를 확인하기 위한 flag
+			isTB = Decode(dsDetail.GetColumn(0, "사용시스템구분"), 'TB', 'Y','N');
+			
+			trace("[lee:debug:사용시스템구분] " + dsDetail.GetColumn(0, "사용시스템구분"));
+			trace("[lee:debug:isTB] " + isTB );
+           
+			if (stepId == "001") btnSave.Visible = false;	
+           
+			if(isTB == "Y") {
+				setEAIInfo();					
+			}
+			
+            gfn_viewResponseBtn(shpResponse, routeInfo);
+            gfn_objMaskAll(tabWorkDetail.tabBaseInfo);           
+			
+        } else if (svcid == "getDupInfo") { 
+            //alert("isDupAcnoValue:" + isDupAcnoValue);
+            //alert("isDupCdnoValue:" + isDupCdnoValue);
+        } else if (svcid == "doProcess") {
+            oriPabuno = dsDetail.GetColumn(0, "주민사업자번호");
+            if (dsProcess.GetColumn(0, "응답명") == "저장") {
+                gfn_msgDialog("저장 되었습니다"); 
+                preAcct = tabWorkDetail.tabBaseInfo.meAcno.Value;
+				preSubAcct = tabWorkDetail.tabBaseInfo.edtSubAcnoSeq.Value;
+				if (popUpYn == "Y") { //테스트 할 것.
+                    var strReturn = gfn_dialog(this, "dp01::DP0101_Popup.xml","nRow =" + "0" ,320,500,"CloseFlag=true",500,10);
+                    legacyCall("0", strReturn[0], strReturn[1]);
+                }
+            } else {
+                var nextUserId = dsProcess.GetColumn(0, "다음사용자직번");
+                responseName = dsProcess.GetColumn(0, "응답명");
+                if (stepId == "002")
+                gfn_processDialog(nextUserId, responseName);
+              
+                trace("[lee:debug:다음스텝ID ] " + dsProcess.GetColumn(0, "다음스텝ID"));
+                trace("[lee:debug:stepId] " + stepId);
+                
+                if(isTB == "Y") {
+					var sid = dsProcess.GetColumn(0, "다음스텝ID");
+					sendEAI(sid);					
+				}
+                
+                var strMessage = "";
+                UserNotify(CONSTANT_USERNOTIFY_CLOSE, strMessage);
+                
+            }
+        } else if (svcid == "setCsInfoQualCnr") {
+            gfn_msgDialog("품질관리 항목별점검결과내역 저장완료", "INF");
+            //확인 필요
+            UserNotify(CONSTANT_USERNOTIFY_CLOSE, "");
+            
+        } else if( svcid == "getImageLegacyList" ) {
+            //최초 로딩 후 가져온 이미지를 화면출력한다
+            if( dsImage.GetCount() > 0 ) {
+                grdImage_OnCellClick(grdImage,dsImage.currow);
+            }
+        } else if( svcid == "getImageList" ) {
+            //최초 로딩 후 가져온 이미지를 화면출력한다
+            if( dsImage.GetCount() > 0 ) {
+                grdImage_OnCellClick(grdImage,dsImage.currow);
+            }
+        } else if(svcid == "getdsRsndRsn") {
+			dsRsndRsn.InsertRow(0);
+			dsRsndRsn.SetColumn(0, "G2G코드", "");
+			dsRsndRsn.SetColumn(0, "G2G출력코드명", "::::::: 선택하세요 :::::::");
+			tabWorkDetail.tabMsg.cboRsndRsn.Index = 0;
+		} else if( svcid == "getEaiData" ) {
+            eaiReturnValue = dsEaiRecv.GetColumn(0, "변경여부");
+        } else if( svcid == "getPreStep" ) {
+            preStep = dsPreStep.GetColumn(0, "워크플로우스텝구분");
+          // jw.    심스 이미지 전송
+        } else if ( svcid == "carryToSimsDp" ) { 
+			CO0002_MsgInfoPopup.close();  /* 정보창 닫기 */
+			msgResultEAI();
+        } else if ( svcid == "sendEaiDataTB" ) { 
+			trace("@@@@@@@@@@@@@@@@@@ TB EAI sending sucess ...@@@@@@@@@@@@@@@@@@");
+        }     
+        
+    }
+}
+
+// EAI 연계 (parsing 된 정보) jw.
+function msgResultEAI()
+{
+	var receiveMsg = "";
+    
+    if( dsEaiRecv_0.rowcount > 0 ) {  
+		receiveMsg = trim(dsEaiRecv_0.GetColumn(0,"처리결과"));
+		if ( receiveMsg == "0000" || receiveMsg == "pass" ) {
+       	    didEAI = "Y";  
+			process(responseName,responseId);   // do process 처리 			
+			
+		} else {
+            gfn_msgDialog("처리중 오류가 발생하여 요청을 처리하지 못했습니다. \n\n오류메시지:"+receiveMsg);
+            return;
+		}
+		return;
+    } else {   // eai 처리 에러 
+		gfn_msgDialog("처리중 오류가 발생하여 요청을 처리하지 못했습니다.");
+		return;
+    }
+}
+
+// 화면연계후 처리
+function endProcess()
+{
+    //연계 송신 정보 조회
+	dsLegacyIn   = gfn_getLegacyInputDs();
+	legacyScrnId = dsLegacyIn.getColumnNF(0,"화면ID");
+    legacyScrnNm = dsLegacyIn.getColumnNF(0,"화면명");
+    trace("legacyScrnId:" + legacyScrnId);
+    trace("legacyScrnNm:" + legacyScrnNm);
+	//연계 수신 정보 조회
+	dsLegacyOut  = gfn_getLegacyOutputDs();
+	responseData = dsLegacyOut.getColumnNF(0,"수신된 연계정보항목명");
+    trace("dsLegacyOut.rowCount():" + dsLegacyOut.rowCount());
+    gfn_legacy_focus();
+	// 연계 완료 후 업무 조건 별 처리 
+    if (stepId == "002") {
+        trace("stepId:002");
+        if ( legacyScrnId == "26010100000" && trim(legacyScrnNm) == "고객조회 및 신규" ) { //고객조회 및 신규
+            trace("고객조회 및 신규 EndProcess");
+            // 구) fn_GetCRM_26010100000_BC1
+            trace("dsLegacyOut.getColumn(0, 고객번호):" + dsLegacyOut.getColumn(0, "고객번호"));
+            if (dsLegacyOut.rowCount() > 0 && Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) > 0 ) {
+                popUpYn = "Y";
+                trace("정상고객");    
+                //자점고객이 아닐경우 등록화면으로 분기, - 현재 사용안함.
+                        //구) fn_Call_CRM_26010100000_BC2
+                        //legacyCall(0, "26010100000", "고객조회(법인)"); //
+                //자점고객일  경우
+                    if (dsLegacyOut.rowCount() < 2 ) { //데이터가 하나만 존재할 경우
+                        gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+                        validation("저장", "btnSave");
+                    } else { //멀티건일 경우(고객번호가 여러개), 고객타입 여러개인경우도 포함.
+                        dsCnoList.ClearData();    
+                        dsCnoList.AppendDataset(dsLegacyOut);
+                        var strReturn = gfn_dialog(this, "dp01::DP0101_CnoPopup.xml","" ,168,470,"CloseFlag=true",500,10);
+                        // if (strReturn == 0)
+                            // validation("저장", "btnSave");
+                    }
+            } else {
+                gfn_closeLegacyDialog();
+                trace("고객등록 call");
+                legacyCall(0, "26010100000", "고객등록");
+            }
+        } else if ( legacyScrnId == "26010100000" && trim(legacyScrnNm) == "고객등록" ) { 
+            trace("고객등록 EndProcess");
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+            //구)fn_GetCRM_26010100000_BC2(RcvSatus, CmdBtnName, data)
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) == 0 ) {
+                gfn_msgDialog("고객번호를 읽어오는도중 CRM에서 Error가 발생하였습니다. \n 확인후 다시 시도하여 주십시오", "ERR");
+            } else {
+                validation("저장", "btnSave");
+            }
+        } else if ( legacyScrnId == "26010100000" && trim(legacyScrnNm) == "고객등록(결과는 조회)" ) { 
+            trace("고객등록(결과는 조회) EndProcess");
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+            /*고객등록처리중 조회결과 발생*/
+            //구)fn_GetCRM_26010100000_BC3(RcvSatus, CmdBtnName, data)
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) > 0 ) {
+                validation("저장", "btnSave");
+            } else { //고객 신규 등록
+                gfn_closeLegacyDialog();
+                trace("고객등록 call");
+                legacyCall(0, "26010100000", "고객등록"); 
+            }
+        } else if ( legacyScrnId == "26010300000" && trim(legacyScrnNm) == "고객조회(법인)" ) { 
+            trace("고객조회(법인) EndProcess");
+            if (dsLegacyOut.rowCount() > 0 && Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) > 0 ) {
+                popUpYn = "Y";
+                trace("정상고객");    
+                gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+                validation("저장", "btnSave");
+            } else {
+                gfn_closeLegacyDialog();
+                trace("고객등록(법인) call");
+                legacyCall(0, "26010300000", "고객등록(법인)"); 
+    
+            }
+        } else if ( legacyScrnId == "26010300000" && trim(legacyScrnNm) == "고객등록(법인)" ) { 
+            trace("고객등록(법인) EndProcess");
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+            /*고객등록(법인)처리중 조회결과 발생*/
+            //구)fn_Call_CRM_26010300000_BC2(RcvSatus, CmdBtnName, data)
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) == 0 ) {
+                gfn_msgDialog("고객번호를 읽어오는도중 CRM에서 Error가 발생하였습니다. \n 확인후 다시 시도하여 주십시오", "ERR");
+                tabWorkDetail.tabBaseInfo.meCno.Value = "";
+                tabWorkDetail.tabBaseInfo.edtCnm.Text = "";
+            } else {
+                validation("저장", "btnSave");
+            }
+        } else if ( legacyScrnId == "26010300000" && trim(legacyScrnNm) == "고객등록(법인)(결과는 조회)" ) { 
+            trace("고객등록(법인)(결과는 조회) EndProcess");
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+            /*고객등록(법인)(결과는 조회)처리중 조회결과 발생*/
+            //구)fn_GetCRM_26010300000_BC3(RcvSatus, CmdBtnName, data)
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) > 0 ) {
+                validation("저장", "btnSave");
+            } else { //고객등록(법인)
+                gfn_closeLegacyDialog();
+                trace("고객등록(법인) call");
+                legacyCall(0, "26010300000", "고객등록(법인)"); 
+            }
+        } else {
+            // 연계 수신 정보를 dsDetail에 해당 컬럼 정보 변경
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail);     
+            gfn_legacy_focus();
+        }
+    } else if (stepId == "003") {
+        trace("stepId:003");
+        //반환 값은 없으나 기존에 고객유무 체크
+        if ( legacyScrnId == "26010100000" && trim(legacyScrnNm) == "고객조회 및 신규" ) { 
+            trace("고객조회 및 신규 EndProcess");
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) == 0 ) {
+                gfn_msgDialog("고객조회에 실패하였습니다. 주민사업자번호를 확인하시고 다시 시도하여 주십시오!", "ERR");
+            }
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail); 
+        } else if ( legacyScrnId == "26010300000" && trim(legacyScrnNm) == "고객조회(법인)" ) { 
+            trace("고객조회(법인) EndProcess");
+            trace("고객조회 EndProcess");
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) == 0 ) {
+                //센터업무 효율화를 위해 주석처리
+                //gfn_msgDialog("고객조회에 실패하였습니다. 주민사업자번호를 확인하시고 다시 시도하여 주십시오!", "ERR");
+            }
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail); 
+        }
+    } else if (stepId == "999") {
+        trace("stepId:999");
+        if ( legacyScrnId == "26010100000" && trim(legacyScrnNm) == "고객조회" ) { 
+            trace("고객조회 EndProcess");
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) == 0 ) {
+                gfn_msgDialog("고객조회에 실패하였습니다. 주민사업자번호를 확인하시고 다시 시도하여 주십시오!", "ERR");
+            }
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail); 
+        } else if ( legacyScrnId == "26010300000" && trim(legacyScrnNm) == "고객조회(법인)" ) { 
+            trace("고객조회(법인) EndProcess");
+            trace("고객조회 EndProcess");
+            if (Length(trim(dsLegacyOut.getColumn(0, "고객번호"))) == 0 ) {
+                gfn_msgDialog("고객조회에 실패하였습니다. 주민사업자번호를 확인하시고 다시 시도하여 주십시오!", "ERR");
+            }
+            gfn_dsMatchColToTargetDs(dsLegacyOut, dsDetail); 
+        }
+    }
+
+    if (left(legacyScrnId,5) == "01010") {
+        setProperty( "chkSealUseYn", "Enable", false); 
+        dsDetail.SetColumn(0, "연동거래여부", "Y");
+    }
+	
+	// 업무 상세 화면 Focus 호출
+	//gfn_legacy_focus();
+	
+	// 화면연계 진행 팝업 종료 처리
+	gfn_closeLegacyDialog();
+    tabWorkDetail.tabBaseInfo.edtCnm.SetFocus();
+}
+
+
+//추가스캔버큰 클릭 시
+function btnAppendScan_OnClick(obj)
+{
+	addImageScan();
+}
+
+function addImageScan() 
+{
+	var routingCd = "0101";
+	var mapNm = "";
+	var workType = CONSTANT_WORKTYPE_DP;
+	var imageKey = dsDetail.GetColumn(0, "이미지키");
+	var urlParams = "";
+	
+	if( dsDetail.GetColumn(0, "내부거래구분") == 1 ){
+		mapNm = "TDEP-010";
+	}else{
+		mapNm = "TDEP-011";
+	}
+	
+	if( substr(imageKey, 0, 4) == '0492'){
+		mapNm = "TDOT-010";
+		routingCd = "9201";
+	}
+	
+	urlParams += "workType=" + workType;
+	urlParams += "&imageKey=" + imageKey;
+	urlParams += "&routingCd=" + routingCd;
+	urlParams += "&mapNm=" + mapNm;
+	urlParams += "&resend=" + "FALSE";
+	urlParams += "&append=" + "TRUE";
+	urlParams += "&quickFlag=" + "FALSE";
+	urlParams += "&cover=" + "FALSE";
+	urlParams += "&res=" + "200";
+	urlParams += "&endFunc=" + "init()";
+	
+	gfn_middleScan(urlParams);
+}
+
+
+// 이미지 새로고침
+function btnReload_OnClick(obj)
+{
+	if (detailType != "view" && connMenuChk != "DP141") {
+        http.Sync = true;        
+        gfn_getImageLegacyList(CONSTANT_WORKTYPE_DP, mapId, stepId, imageKey, "");
+        http.Sync = false;        
+    } else {
+        http.Sync = true;
+        gfn_getImageList(CONSTANT_WORKTYPE_DP, imageKey);
+        http.Sync = false;
+
+    }
+}
+
+
+function setEAIInfo() {
+	// EAI 정보 초기화
+	http.Sync = true;
+	trace("#################### INIT EAI INFO ####################");
+	gfn_getEaiInfoes("00", "AA", "A01", dsEaiBaseListTB, dsEaiItemListTB, CONSTANT_SYSTEM_NG2G, "getEaiInfoes", "callback") ;
+	trace("dsEaiBaseListTB : " + dsEaiBaseListTB.SaveXML());
+	trace("dsEaiItemListTB : " + dsEaiItemListTB.SaveXML());
+	http.Sync = false;
+}
+
+// Tablet Branch 거래 상태 EAI전송
+function sendEAI(sid) {
+	
+	if (dsEaiBaseListTB.rowcount == 0) {			
+		trace("현재 EAI 거래가 되지 않습니다.");
+		return ;
+	}
+	
+	if (gfn_isEmpty(sid)) {
+		trace("현재 스텝(상태)을 알 수 없습니다.");
+		return ;
+	}
+
+	var	eaiCode = "EIRI008333";	
+		
+	dsSendDataTB.ClearData();
+	dsSendDataTB.AddRow();
+	dsSendDataTB.SetColumn(0, "이미지키", imageKey);
+	dsSendDataTB.SetColumn(0, "업무구분", "04");		
+	dsSendDataTB.SetColumn(0, "맵구분", mapId);
+	dsSendDataTB.SetColumn(0, "여신취급번호", "");				
+		
+	if ("999" == sid || "998" == sid) {
+		dsSendDataTB.SetColumn(0, "상태코드", sid);
+	}
+	else {
+		dsSendDataTB.SetColumn(0, "상태코드", "001");
+	}		
+		
+	//	EAI Send Dataset을 구성한다.
+	gfn_DataToSendDataset(eaiCode, dsEaiItemListTB, dsEaiSendDataTB, dsEaiRecvDataTB, dsSendDataTB, 0);
+		
+	trace("#################### EAI DATASET INFO ####################");
+	trace(dsEaiBaseListTB.SaveXML());
+	trace(dsEaiItemListTB.SaveXML());
+	trace(dsEaiSendDataTB.SaveXML());
+	trace(dsEaiRecvDataTB.SaveXML());		
+	trace(dsSendDataTB.SaveXML());
+			
+	//	EAI 거래 실행.
+	gfn_EaiSend(eaiCode, dsEaiBaseListTB, dsEaiItemListTB, dsEaiSendDataTB, dsEaiRecvDataTB, "01", "sendEaiDataTB", "callback");
+		
+}]]></Script>
+</Window>
